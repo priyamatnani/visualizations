@@ -33,7 +33,7 @@ gameOfThrones.controller('battleController',['battleService', function(battleSer
 
                 self.chartLabels.push(d['StartStation']);
                 lineAlpha.push({x: i+1, label: d['StartStation'],y: d['bike_count']});
-                    lineBeta.push({x: i+1 , label: d['StartStation'],y: d['rides']});
+                lineBeta.push({x: i+1 , label: d['StartStation'],y: d['rides']});
                     i += 1;
                 });
 
@@ -146,9 +146,9 @@ gameOfThrones.controller('battleController',['battleService', function(battleSer
                     d['hours'] = +d['hours'];
                     d['rides']  = +d['rides'];
 
-                    self.chartLabels.push(d['ZipCode']);
-                    lineAlpha.push({x: i+1, label: d['ZipCode'],y: d['hours']});
-                    lineBeta.push({x: i+1 , label: d['ZipCode'],y: d['rides']});
+                    // self.chartLabels.push(d['ZipCode']);
+                    lineAlpha.push({x: d['ZipCode'], label: d['ZipCode'],y: d['hours']});
+                    lineBeta.push({x: d['ZipCode'] , label: d['ZipCode'],y: d['rides']});
                     i += 1;
                 }
 
@@ -174,7 +174,7 @@ gameOfThrones.controller('battleController',['battleService', function(battleSer
 
     self.options.zipcodeRide = {
         chart: {
-            type: 'lineChart',
+            type: 'multiBarChart',
             height: 450,
             margin : {
                 top: 20,
@@ -185,9 +185,9 @@ gameOfThrones.controller('battleController',['battleService', function(battleSer
             x: function(d){ return d.x; },
             y: function(d){ return d.y; },
             xAxis: {
-                axisLabel: self.chartLabels,
-                // rotateLabels : 45,
-                staggerLabels: false
+                // axisLabel: '',
+                // rotateLabels : 45
+                // staggerLabels: false
 
             },
 
