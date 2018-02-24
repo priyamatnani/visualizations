@@ -1,0 +1,42 @@
+div(ng-controller="battleController as BC")
+
+    md-content
+        md-tabs(md-dynamic-height='', md-border-bottom='')
+            md-tab(label='one')
+                md-content.md-padding
+                    h1.md-display-2 Tab One
+                    p
+                        | udfbkjdbfkjbfdnjb Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla venenatis ante augue. Phasellus volutpat neque ac dui mattis vulputate. Etiam consequat aliquam cursus. In sodales pretium ultrices. Maecenas lectus est, sollicitudin consectetur felis nec, feugiat ultricies mi.
+            md-tab(label='two')
+                md-content.md-padding
+                    div.layout-column.flex(layout-gt-sm="row")
+                        div(flex-gt-sm="30")
+                            //nvd3(options="BC.options", data="BC.data", class="with-3d-shadow with-transitions", api="BC.api")
+
+
+                            md-list( ng-cloak)
+                                md-subheader(class="md-no-sticky") Single Action Checkboxes
+                                    md-list-item(ng-click="BC.chart1() ")
+                                        p Chart 1
+                                    md-list-item
+                                        p Chart 2
+                                    md-list-item
+                                        p Chart 3
+
+                                    md-divider
+
+                        div(flex-gt-sm="70")
+                            md-button.success(ng-click="BC.chart1()") Refresh
+                            //i(class="fa fa-refresh")
+                            div(ng-if= "BC.charts[0] == true")
+                                nvd3(options="BC.options", data="BC.data", class="with-3d-shadow with-transitions", api="BC.api")
+
+
+
+
+
+            md-tab(label='three')
+                md-content.md-padding
+                    h1.md-display-2 Tab Three
+                    p
+                        | Integer turpis erat, porttitor vitae mi faucibus, laoreet interdum tellus. Curabitur posuere molestie dictum. Morbi eget congue risus, quis rhoncus quam. Suspendisse vitae hendrerit erat, at posuere mi. Cras eu fermentum nunc. Sed id ante eu orci commodo volutpat non ac est. Praesent ligula diam, congue eu enim scelerisque, finibus commodo lectus.
