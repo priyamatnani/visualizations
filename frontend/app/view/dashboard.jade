@@ -26,8 +26,8 @@ div(ng-controller="battleController as BC")
                                     md-divider
 
                         div(flex-gt-sm="70")
-                            md-button.success(ng-click="BC.chart1()") Refresh
-                            //i(class="fa fa-refresh")
+                            //md-button.success(ng-click="BC.chart1()") Refresh
+                            i(class="fa fa-refresh", ng-click="BC.chart1()", title="Refresh")
                             div(ng-if= "BC.charts[0] == true")
                                 nvd3(options="BC.options", data="BC.data", class="with-3d-shadow with-transitions", api="BC.api")
 

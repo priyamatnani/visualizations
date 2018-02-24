@@ -23,13 +23,10 @@ gameOfThrones.controller('battleController',['battleService', function(battleSer
             console.log("RESP>>>",resp)
 
             self.chartData = angular.copy(resp);
-            // d3.json(resp, function(error, data) {
-                // d3.csv("../../demo.csv", function(error, data) {
                 var lineAlpha = [], lineBeta = [];
 
                 i = 0;
             self.chartData.forEach(function(d) {
-                    // d['StartStation'] = d['StartStation'],
                     d['bike_count'] = +d['bike_count'],
                     d['rides']  = +d['rides'];
 

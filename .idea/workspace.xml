@@ -2,8 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2d65b549-fdf8-4214-82c3-8471d38786f3" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/app/libs/font-awesome.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/app/index.html" afterPath="$PROJECT_DIR$/frontend/app/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/app/index.jade" afterPath="$PROJECT_DIR$/frontend/app/index.jade" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/app/js/controllers/battleController.js" afterPath="$PROJECT_DIR$/frontend/app/js/controllers/battleController.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/app/view/dashboard.html" afterPath="$PROJECT_DIR$/frontend/app/view/dashboard.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/app/view/dashboard.jade" afterPath="$PROJECT_DIR$/frontend/app/view/dashboard.jade" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -17,41 +22,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/angular_setup/frontend/app/css/style.css">
+      <file leaf-file-name="battleController.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/frontend/app/js/controllers/battleController.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="267">
+              <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dashboard.jade" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/angular_setup/frontend/app/view/dashboard.jade">
+      <file leaf-file-name="dashboard.jade" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/frontend/app/view/dashboard.jade">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" column="68" lean-forward="false" selection-start-line="17" selection-start-column="67" selection-end-line="17" selection-end-column="68" />
+            <state relative-caret-position="435">
+              <caret line="29" column="82" lean-forward="false" selection-start-line="29" selection-start-column="82" selection-end-line="29" selection-end-column="82" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="battleController.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/angular_setup/frontend/app/js/controllers/battleController.js">
+      <file leaf-file-name="index.jade" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/frontend/app/index.jade">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="350">
-              <caret line="35" column="55" lean-forward="false" selection-start-line="35" selection-start-column="55" selection-end-line="35" selection-end-column="55" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="battleService.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/angular_setup/frontend/app/js/services/battleService.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" column="45" lean-forward="false" selection-start-line="16" selection-start-column="45" selection-end-line="16" selection-end-column="45" />
+            <state relative-caret-position="135">
+              <caret line="9" column="49" lean-forward="false" selection-start-line="9" selection-start-column="49" selection-end-line="9" selection-end-column="49" />
               <folding />
             </state>
           </provider>
@@ -62,6 +57,8 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>from batt</find>
+      <find>refres</find>
+      <find>????</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -76,6 +73,9 @@
         <option value="$PROJECT_DIR$/angular_setup/frontend/app/view/dashboard.html" />
         <option value="$PROJECT_DIR$/angular_setup/frontend/app/js/controllers/battleController.js" />
         <option value="$PROJECT_DIR$/angular_setup/frontend/app/view/dashboard.jade" />
+        <option value="$PROJECT_DIR$/frontend/app/index.jade" />
+        <option value="$PROJECT_DIR$/frontend/app/view/dashboard.jade" />
+        <option value="$PROJECT_DIR$/frontend/app/js/controllers/battleController.js" />
       </list>
     </option>
   </component>
@@ -85,7 +85,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
     <option name="width" value="1440" />
     <option name="height" value="828" />
   </component>
@@ -104,8 +104,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -116,77 +114,27 @@
             <path>
               <item name="uber" type="b2602c69:ProjectViewProjectNode" />
               <item name="uber" type="462c0819:PsiDirectoryNode" />
-              <item name="angular_setup" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="uber" type="b2602c69:ProjectViewProjectNode" />
-              <item name="uber" type="462c0819:PsiDirectoryNode" />
-              <item name="angular_setup" type="462c0819:PsiDirectoryNode" />
               <item name="frontend" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="uber" type="b2602c69:ProjectViewProjectNode" />
               <item name="uber" type="462c0819:PsiDirectoryNode" />
-              <item name="angular_setup" type="462c0819:PsiDirectoryNode" />
               <item name="frontend" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="uber" type="b2602c69:ProjectViewProjectNode" />
               <item name="uber" type="462c0819:PsiDirectoryNode" />
-              <item name="angular_setup" type="462c0819:PsiDirectoryNode" />
               <item name="frontend" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="uber" type="b2602c69:ProjectViewProjectNode" />
-              <item name="uber" type="462c0819:PsiDirectoryNode" />
-              <item name="angular_setup" type="462c0819:PsiDirectoryNode" />
-              <item name="frontend" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-              <item name="controllers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="uber" type="b2602c69:ProjectViewProjectNode" />
-              <item name="uber" type="462c0819:PsiDirectoryNode" />
-              <item name="angular_setup" type="462c0819:PsiDirectoryNode" />
-              <item name="frontend" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-              <item name="services" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="uber" type="b2602c69:ProjectViewProjectNode" />
-              <item name="uber" type="462c0819:PsiDirectoryNode" />
-              <item name="angular_setup" type="462c0819:PsiDirectoryNode" />
-              <item name="frontend" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="view" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="uber" type="b2602c69:ProjectViewProjectNode" />
-              <item name="uber" type="462c0819:PsiDirectoryNode" />
-              <item name="angular_setup" type="462c0819:PsiDirectoryNode" />
-              <item name="frontend" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="view" type="462c0819:PsiDirectoryNode" />
-              <item name="battleDetails.jade" type="620a8d5e:NestingTreeNode" />
-            </path>
-            <path>
-              <item name="uber" type="b2602c69:ProjectViewProjectNode" />
-              <item name="uber" type="462c0819:PsiDirectoryNode" />
-              <item name="angular_setup" type="462c0819:PsiDirectoryNode" />
-              <item name="frontend" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="view" type="462c0819:PsiDirectoryNode" />
-              <item name="dashboard.jade" type="620a8d5e:NestingTreeNode" />
+              <item name="libs" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -194,6 +142,11 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="settings.editor.selected.configurable" value="watcher.settings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/frontend/app/libs" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -218,21 +171,22 @@
       <option name="presentableId" value="Default" />
       <updated>1514259319488</updated>
       <workItem from="1514259320844" duration="995000" />
-      <workItem from="1519422127825" duration="10022000" />
+      <workItem from="1519422127825" duration="11145000" />
+      <workItem from="1519491382154" duration="1002000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11017000" />
+    <option name="totallyTimeSpent" value="13142000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1440" height="828" extended-state="0" />
+    <frame x="0" y="0" width="1440" height="900" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24947146" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287858" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32769045" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -258,7 +212,7 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/angular_setup/frontend/app/css/style.css">
+    <entry file="file://$PROJECT_DIR$/frontend/app/js/controllers/battleController.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -266,56 +220,48 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/angular_setup/frontend/app/view/dashboard.jade">
+    <entry file="file://$PROJECT_DIR$/frontend/app/view/dashboard.jade">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="435">
+          <caret line="29" column="62" lean-forward="false" selection-start-line="29" selection-start-column="62" selection-end-line="29" selection-end-column="62" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/angular_setup/backend/got/got/settings.py">
+    <entry file="file://$PROJECT_DIR$/frontend/app/view/dashboard.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="585">
-          <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+        <state relative-caret-position="15">
+          <caret line="1" column="22" lean-forward="false" selection-start-line="1" selection-start-column="22" selection-end-line="1" selection-end-column="22" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/angular_setup/backend/got/got/urls.py">
+    <entry file="file://$PROJECT_DIR$/frontend/app/index.jade">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="5" lean-forward="false" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
+        <state relative-caret-position="210">
+          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/angular_setup/backend/got/manage.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/angular_setup/frontend/app/view/dashboard.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/angular_setup/frontend/app/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/angular_setup/frontend/app/css/style.css" />
+    <entry file="file://$PROJECT_DIR$/angular_setup/frontend/app/view/dashboard.jade" />
+    <entry file="file://$PROJECT_DIR$/angular_setup/backend/got/got/settings.py" />
+    <entry file="file://$PROJECT_DIR$/angular_setup/backend/got/got/urls.py" />
+    <entry file="file://$PROJECT_DIR$/angular_setup/backend/got/manage.py" />
+    <entry file="file://$PROJECT_DIR$/angular_setup/frontend/app/view/dashboard.html" />
+    <entry file="file://$PROJECT_DIR$/angular_setup/frontend/app/css/style.css" />
     <entry file="file://$PROJECT_DIR$/angular_setup/backend/got/import_battles.py" />
-    <entry file="file://$PROJECT_DIR$/angular_setup/backend/got/manage.py">
+    <entry file="file://$PROJECT_DIR$/angular_setup/backend/got/manage.py" />
+    <entry file="file://$PROJECT_DIR$/angular_setup/backend/got/got/settings.py" />
+    <entry file="file://$PROJECT_DIR$/angular_setup/backend/got/got/urls.py" />
+    <entry file="file://$PROJECT_DIR$/angular_setup/frontend/app/index.jade" />
+    <entry file="file://$PROJECT_DIR$/angular_setup/frontend/app/js/services/battleService.js" />
+    <entry file="file://$PROJECT_DIR$/angular_setup/frontend/app/view/battleDetails.html" />
+    <entry file="file://$PROJECT_DIR$/angular_setup/frontend/app/view/dashboard.html" />
+    <entry file="file://$PROJECT_DIR$/angular_setup/frontend/app/js/controllers/battleController.js" />
+    <entry file="file://$PROJECT_DIR$/angular_setup/frontend/app/view/dashboard.jade" />
+    <entry file="file://$PROJECT_DIR$/frontend/app/view/battleDetails.jade">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -323,23 +269,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/angular_setup/backend/got/got/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="585">
-          <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/angular_setup/backend/got/got/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="5" lean-forward="false" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/angular_setup/frontend/app/index.jade">
+    <entry file="file://$PROJECT_DIR$/frontend/app/libs/font-awesome.min.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -347,42 +277,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/angular_setup/frontend/app/js/services/battleService.js">
+    <entry file="file://$PROJECT_DIR$/frontend/app/view/dashboard.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="45" lean-forward="false" selection-start-line="16" selection-start-column="45" selection-end-line="16" selection-end-column="45" />
+        <state relative-caret-position="15">
+          <caret line="1" column="22" lean-forward="false" selection-start-line="1" selection-start-column="22" selection-end-line="1" selection-end-column="22" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/angular_setup/frontend/app/view/battleDetails.html">
+    <entry file="file://$PROJECT_DIR$/frontend/app/index.jade">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="135">
+          <caret line="9" column="49" lean-forward="false" selection-start-line="9" selection-start-column="49" selection-end-line="9" selection-end-column="49" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/angular_setup/frontend/app/view/dashboard.html">
+    <entry file="file://$PROJECT_DIR$/frontend/app/view/dashboard.jade">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="60" lean-forward="false" selection-start-line="16" selection-start-column="60" selection-end-line="16" selection-end-column="60" />
+        <state relative-caret-position="435">
+          <caret line="29" column="82" lean-forward="false" selection-start-line="29" selection-start-column="82" selection-end-line="29" selection-end-column="82" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/angular_setup/frontend/app/js/controllers/battleController.js">
+    <entry file="file://$PROJECT_DIR$/frontend/app/js/controllers/battleController.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="35" column="55" lean-forward="false" selection-start-line="35" selection-start-column="55" selection-end-line="35" selection-end-column="55" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/angular_setup/frontend/app/view/dashboard.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="68" lean-forward="false" selection-start-line="17" selection-start-column="67" selection-end-line="17" selection-end-column="68" />
+        <state relative-caret-position="267">
+          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
           <folding />
         </state>
       </provider>
