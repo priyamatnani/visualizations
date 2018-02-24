@@ -11,6 +11,7 @@ gameOfThrones.controller('battleController',['battleService', function(battleSer
     self.data = [];
     self.charts=[false,false,false,false,false];
     self.chartLabels =[];
+    self.options ={};
 
 
     self.chart1 = function(){
@@ -25,15 +26,15 @@ gameOfThrones.controller('battleController',['battleService', function(battleSer
             self.chartData = angular.copy(resp);
                 var lineAlpha = [], lineBeta = [];
 
-                i = 0;
+            i = 0;
             self.chartData.forEach(function(d) {
-                    d['bike_count'] = +d['bike_count'],
+                    d['bike_count'] = +d['bike_count'];
                     d['rides']  = +d['rides'];
 
                 self.chartLabels.push(d['StartStation']);
                 lineAlpha.push({x: i+1, label: d['StartStation'],y: d['bike_count']});
                     lineBeta.push({x: i+1 , label: d['StartStation'],y: d['rides']});
-                    i += 1
+                    i += 1;
                 });
 
                 self.data = [
@@ -50,15 +51,14 @@ gameOfThrones.controller('battleController',['battleService', function(battleSer
                 ];
 
                 self.$apply();
-            // });
         });
 
 
-    }
+    };
 
-    // self.csvData();
 
-    self.options = {
+
+    self.options.chart1 = {
         chart: {
             type: 'multiBarChart',
             height: 450,
@@ -85,6 +85,43 @@ gameOfThrones.controller('battleController',['battleService', function(battleSer
                 }
             },
             useInteractiveGuideline: false
+        }
+    };
+
+    self.userType = function(){
+
+        for(var i = 0 ; i < self.charts.length; i++){
+            self.charts[i] = false;
+        }
+        self.charts[0] = true;
+
+        battleService.userType().then(function(resp){
+            console.log("RESP>>>",resp);
+
+            self.chartData = angular.copy(resp);
+
+
+        });
+    };
+
+    self.options.userType = {
+        chart: {
+            type: 'pieChart',
+            height: 500,
+            x: function(d){return d.label;},
+            y: function(d){return d.value;},
+            showLabels: true,
+            duration: 500,
+            labelThreshold: 0.01,
+            labelSunbeamLayout: true,
+            legend: {
+                margin: {
+                    top: 5,
+                    right: 35,
+                    bottom: 5,
+                    left: 0
+                }
+            }
         }
     };
 
