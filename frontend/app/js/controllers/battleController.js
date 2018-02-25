@@ -350,6 +350,79 @@ gameOfThrones.controller('battleController',['battleService', function(battleSer
         }
     };
 
+
+
+
+    self.options.hourRides = {
+        chart: {
+            type: 'lineChart',
+            height: 450,
+            margin : {
+                top: 20,
+                right: 20,
+                bottom: 40,
+                left: 55
+            },
+            x: function(d){ return d.x; },
+            y: function(d){ return d.y; },
+            useInteractiveGuideline: true,
+            dispatch: {
+                stateChange: function(e){ console.log("stateChange"); },
+                changeState: function(e){ console.log("changeState"); },
+                tooltipShow: function(e){ console.log("tooltipShow"); },
+                tooltipHide: function(e){ console.log("tooltipHide"); }
+            },
+            xAxis: {
+                axisLabel: 'Time (hours)'
+            },
+            yAxis: {
+                axisLabel: 'Rides Count',
+                tickFormat: function(d){
+                    return d3.format('f')(d);
+                }
+                // axisLabelDistance: -10
+            },
+            callback: function(chart){
+                console.log("!!! lineChart callback !!!");
+            }
+        }
+    };
+
+
+
+    self.hourRides = function() {
+        var sin2 = [];
+        for(var i = 0 ; i < self.charts.length; i++){
+            self.charts[i] = false;
+        }
+        self.charts[2] = true;
+
+        battleService.hourRides().then(function(resp){
+            json = resp;
+            //Data is represented as an array of {x,y} pairs.
+            for (var i = 0; i < json.length; i++) {
+                sin2.push({
+                    x: json[i]['start_hour'],
+                    y: json[i]['rides']
+
+                });
+            }
+
+            //Line chart data should be sent as an array of series objects.
+            self.dataHourRides = [
+
+                {
+                    values: sin2,
+                    key: 'No. of Rides',
+                    color: '#FFA500',
+                    area: true      //area - set to true if you want this line to turn into a filled area chart.
+                }
+            ];
+        });
+
+
+
+    };
     setTimeout(function(){
         console.log('scope api:', self.api);
         self.api.refresh();

@@ -70,7 +70,5 @@ gameOfThrones.factory('battleService',['$q', '$http' ,function($q, $http){
         }
 
 
-
-
     }
 }]);

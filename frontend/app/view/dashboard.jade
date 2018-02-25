@@ -58,8 +58,8 @@ div(ng-controller="battleController as BC")
                                         p Bikes vs Rides done
                                     md-list-item(ng-click="BC.userType()")
                                         p Type of user division
-                                    md-list-item
-                                        p Chart 3
+                                    md-list-item(ng-click="BC.hourRides()")
+                                        p Rides per hour
 
                                     md-divider
 
@@ -70,6 +70,7 @@ div(ng-controller="battleController as BC")
                                 nvd3(options="BC.options.bikeRides", data="BC.data", class="with-3d-shadow with-transitions")
                             div(ng-if= "BC.charts[1] == true")
                                 nvd3(options="BC.options.userType", data="BC.chartData", class="with-3d-shadow with-transitions")
+                            div(ng-if= "BC.charts[2] == true")
+                                nvd3(options="BC.options.hourRides", data="BC.dataHourRides", class="with-3d-shadow with-transitions")
 
-                                //nvd3(options="BC.options.userType", data="BC.chartData")
 
