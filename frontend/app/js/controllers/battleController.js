@@ -135,11 +135,8 @@ gameOfThrones.controller('battleController',['battleService', function(battleSer
 
         battleService.userType(url).then(function(resp){
 
-            self.userRideCount = [];
-            self.userRideCount.push({
-                key : "Count",
-                values : resp
-            });
+            self.userRideCount = resp;
+            // userRideCount
 
             self.userType2("https://raw.githubusercontent.com/kartikn27/raw_files/master/user_total_hours.json")
 
@@ -148,28 +145,21 @@ gameOfThrones.controller('battleController',['battleService', function(battleSer
 
     self.options.userType = {
         chart: {
-            type: 'discreteBarChart',
-            height: 450,
-            margin : {
-                top: 20,
-                right: 20,
-                bottom: 40,
-                left: 55
-            },
-            x: function(d){ return d.label; },
-            y: function(d){return d.value + (1e-10);},
-            showValues: true,
-            valueFormat: function(d){
-                return d3.format(',.4f')(d);
-            },
+            type: 'pieChart',
+            height: 500,
+            x: function(d){return d.label;},
+            y: function(d){return d.value;},
+            showLabels: true,
             duration: 500,
-            xAxis: {
-                axisLabel: 'User Type'
-                //rotateLabels : 45,
-
-            },
-            yAxis: {
-                axisLabel: 'No. of Rides'
+            labelThreshold: 0.01,
+            labelSunbeamLayout: true,
+            legend: {
+                margin: {
+                    top: 5,
+                    right: 35,
+                    bottom: 5,
+                    left: 0
+                }
             }
         }
 

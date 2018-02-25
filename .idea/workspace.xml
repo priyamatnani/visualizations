@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2d65b549-fdf8-4214-82c3-8471d38786f3" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/app/index.html" afterPath="$PROJECT_DIR$/frontend/app/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/app/index.jade" afterPath="$PROJECT_DIR$/frontend/app/index.jade" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/app/js/controllers/battleController.js" afterPath="$PROJECT_DIR$/frontend/app/js/controllers/battleController.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/app/js/services/battleService.js" afterPath="$PROJECT_DIR$/frontend/app/js/services/battleService.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/app/view/dashboard.html" afterPath="$PROJECT_DIR$/frontend/app/view/dashboard.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/app/view/dashboard.jade" afterPath="$PROJECT_DIR$/frontend/app/view/dashboard.jade" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -21,26 +16,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="battleController.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="battleController.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/frontend/app/js/controllers/battleController.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="658">
-              <caret line="225" column="41" lean-forward="false" selection-start-line="225" selection-start-column="41" selection-end-line="225" selection-end-column="41" />
+            <state relative-caret-position="263">
+              <caret line="139" column="0" lean-forward="true" selection-start-line="139" selection-start-column="0" selection-end-line="139" selection-end-column="0" />
               <folding>
                 <element signature="e#303#1514#0" expanded="false" />
                 <element signature="e#1548#2247#0" expanded="false" />
-                <element signature="e#5783#6993#0" expanded="false" />
-                <element signature="e#7027#7718#0" expanded="false" />
-                <element signature="e#7753#8086#0" expanded="false" />
-                <element signature="e#8117#8651#0" expanded="false" />
-                <element signature="e#8685#9520#0" expanded="false" />
-                <element signature="e#9615#10836#0" expanded="false" />
-                <element signature="e#10871#11978#0" expanded="false" />
-                <element signature="e#12015#12923#0" expanded="false" />
-                <element signature="e#12965#14129#0" expanded="false" />
-                <element signature="e#14165#15437#0" expanded="false" />
-                <element signature="e#15478#16849#0" expanded="false" />
-                <element signature="e#16879#17719#0" expanded="false" />
+                <element signature="e#5518#6728#0" expanded="false" />
+                <element signature="e#6762#7453#0" expanded="false" />
+                <element signature="e#8420#9255#0" expanded="false" />
+                <element signature="e#9350#10571#0" expanded="false" />
+                <element signature="e#10606#11713#0" expanded="false" />
+                <element signature="e#11750#12658#0" expanded="false" />
+                <element signature="e#12700#13864#0" expanded="false" />
+                <element signature="e#13900#15172#0" expanded="false" />
+                <element signature="e#15213#16584#0" expanded="false" />
+                <element signature="e#16614#17454#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -66,11 +59,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dashboard.jade" pinned="false" current-in-tab="true">
+      <file leaf-file-name="dashboard.jade" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/frontend/app/view/dashboard.jade">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="535">
-              <caret line="80" column="0" lean-forward="true" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
+            <state relative-caret-position="553">
+              <caret line="79" column="98" lean-forward="false" selection-start-line="79" selection-start-column="85" selection-end-line="79" selection-end-column="98" />
               <folding />
             </state>
           </provider>
@@ -103,8 +96,9 @@
       <find>svg</find>
       <find>data</find>
       <find>self.data1</find>
-      <find>chart1</find>
       <find>color</find>
+      <find>pieChart</find>
+      <find>chart1</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -124,8 +118,8 @@
         <option value="$PROJECT_DIR$/frontend/app/js/controllers/insightsController.js" />
         <option value="$PROJECT_DIR$/frontend/app/js/services/battleService.js" />
         <option value="$PROJECT_DIR$/frontend/app/index.jade" />
-        <option value="$PROJECT_DIR$/frontend/app/js/controllers/battleController.js" />
         <option value="$PROJECT_DIR$/frontend/app/view/dashboard.jade" />
+        <option value="$PROJECT_DIR$/frontend/app/js/controllers/battleController.js" />
       </list>
     </option>
   </component>
@@ -252,12 +246,12 @@
       <updated>1514259319488</updated>
       <workItem from="1514259320844" duration="995000" />
       <workItem from="1519422127825" duration="11145000" />
-      <workItem from="1519491382154" duration="24540000" />
+      <workItem from="1519491382154" duration="24922000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="36680000" />
+    <option name="totallyTimeSpent" value="37062000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="6" />
@@ -299,18 +293,16 @@
           <folding>
             <element signature="e#303#1514#0" expanded="false" />
             <element signature="e#1548#2247#0" expanded="false" />
-            <element signature="e#5783#6993#0" expanded="false" />
-            <element signature="e#7027#7718#0" expanded="false" />
-            <element signature="e#7753#8086#0" expanded="false" />
-            <element signature="e#8117#8651#0" expanded="false" />
-            <element signature="e#8685#9520#0" expanded="false" />
-            <element signature="e#9615#10836#0" expanded="false" />
-            <element signature="e#10871#11978#0" expanded="false" />
-            <element signature="e#12015#12923#0" expanded="false" />
-            <element signature="e#12965#14129#0" expanded="false" />
-            <element signature="e#14165#15437#0" expanded="false" />
-            <element signature="e#15478#16849#0" expanded="false" />
-            <element signature="e#16879#17719#0" expanded="false" />
+            <element signature="e#5518#6728#0" expanded="false" />
+            <element signature="e#6762#7453#0" expanded="false" />
+            <element signature="e#8420#9255#0" expanded="false" />
+            <element signature="e#9350#10571#0" expanded="false" />
+            <element signature="e#10606#11713#0" expanded="false" />
+            <element signature="e#11750#12658#0" expanded="false" />
+            <element signature="e#12700#13864#0" expanded="false" />
+            <element signature="e#13900#15172#0" expanded="false" />
+            <element signature="e#15213#16584#0" expanded="false" />
+            <element signature="e#16614#17454#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -412,29 +404,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/app/js/controllers/battleController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="658">
-          <caret line="225" column="41" lean-forward="false" selection-start-line="225" selection-start-column="41" selection-end-line="225" selection-end-column="41" />
-          <folding>
-            <element signature="e#303#1514#0" expanded="false" />
-            <element signature="e#1548#2247#0" expanded="false" />
-            <element signature="e#5783#6993#0" expanded="false" />
-            <element signature="e#7027#7718#0" expanded="false" />
-            <element signature="e#7753#8086#0" expanded="false" />
-            <element signature="e#8117#8651#0" expanded="false" />
-            <element signature="e#8685#9520#0" expanded="false" />
-            <element signature="e#9615#10836#0" expanded="false" />
-            <element signature="e#10871#11978#0" expanded="false" />
-            <element signature="e#12015#12923#0" expanded="false" />
-            <element signature="e#12965#14129#0" expanded="false" />
-            <element signature="e#14165#15437#0" expanded="false" />
-            <element signature="e#15478#16849#0" expanded="false" />
-            <element signature="e#16879#17719#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/frontend/app/index.jade">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="480">
@@ -453,9 +422,30 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/frontend/app/view/dashboard.jade">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="535">
-          <caret line="80" column="0" lean-forward="true" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
+        <state relative-caret-position="553">
+          <caret line="79" column="98" lean-forward="false" selection-start-line="79" selection-start-column="85" selection-end-line="79" selection-end-column="98" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/app/js/controllers/battleController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="263">
+          <caret line="139" column="0" lean-forward="true" selection-start-line="139" selection-start-column="0" selection-end-line="139" selection-end-column="0" />
+          <folding>
+            <element signature="e#303#1514#0" expanded="false" />
+            <element signature="e#1548#2247#0" expanded="false" />
+            <element signature="e#5518#6728#0" expanded="false" />
+            <element signature="e#6762#7453#0" expanded="false" />
+            <element signature="e#8420#9255#0" expanded="false" />
+            <element signature="e#9350#10571#0" expanded="false" />
+            <element signature="e#10606#11713#0" expanded="false" />
+            <element signature="e#11750#12658#0" expanded="false" />
+            <element signature="e#12700#13864#0" expanded="false" />
+            <element signature="e#13900#15172#0" expanded="false" />
+            <element signature="e#15213#16584#0" expanded="false" />
+            <element signature="e#16614#17454#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
