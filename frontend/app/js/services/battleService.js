@@ -38,6 +38,38 @@ gameOfThrones.factory('battleService',['$q', '$http' ,function($q, $http){
                 }
             });
         },
+        dayRides : function(){
+            return $http.get('https://raw.githubusercontent.com/kartikn27/raw_files/master/day_rides.json' ).then(function (response) {
+                if (response !== undefined && response.data !== undefined) {
+                    return response.data;
+                }
+                else {
+                    return $q.reject(response);
+                }
+            });
+        },
+        dateRides : function(){
+            return $http.get('https://raw.githubusercontent.com/kartikn27/raw_files/master/date_rides.json' ).then(function (response) {
+                if (response !== undefined && response.data !== undefined) {
+                    return response.data;
+                }
+                else {
+                    return $q.reject(response);
+                }
+            });
+        },
+        hourRides : function(){
+            return $http.get('https://raw.githubusercontent.com/kartikn27/raw_files/master/rides_per_hour.json' ).then(function (response) {
+                if (response !== undefined && response.data !== undefined) {
+                    return response.data;
+                }
+                else {
+                    return $q.reject(response);
+                }
+            });
+        }
+
+
 
 
     }
