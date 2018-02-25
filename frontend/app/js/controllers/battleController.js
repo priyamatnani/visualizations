@@ -420,14 +420,88 @@ gameOfThrones.controller('battleController',['battleService', function(battleSer
             ];
         });
 
+    };
 
+
+    self.userRidesOakland = function(){
+        self.OakchartData = [];
+
+        var SJsubs = "https://raw.githubusercontent.com/kartikn27/raw_files/master/OK_rides_combined.json";
+        battleService.subscriberRides(SJsubs).then(function(resp){
+            json = resp;
+            json1 = [];
+            json2 = [];
+
+            for(var i = 0; i < json.length;i++){
+                json1[i] = {};
+                json2[i] = {};
+                json1[i].x = new Date(json[i].x);
+                json2[i].x = new Date(json[i].x);
+                json1[i].y = new Date(json[i].y1);
+                json2[i].y = new Date(json[i].y2);
+
+            }
+            var keywordObjScatter = {
+                "key": 'Customer',
+                "type": "line",
+                "values": json1,
+                "color": 'red',
+                "yAxis": 1
+            };
+            var keywordObjLine = {
+                "key": 'Subscriber',
+                "type": "bar",
+                "values": json2,
+                "color": 'yellow',
+                "yAxis": 1
+            };
+            self.OakchartData.push(keywordObjScatter,keywordObjLine)
+            // self.userRidesOakland();
+        });
+
+    };
+
+    self.userRidesSJ = function(){
+        self.SJchartData = [];
+
+        var SJsubs = "https://raw.githubusercontent.com/kartikn27/raw_files/master/SJ_rides_combined.json";
+        battleService.subscriberRides(SJsubs).then(function(resp){
+                json = resp;
+                json1 = [];
+                json2 = [];
+
+                for(var i = 0; i < json.length;i++){
+                    json1[i] = {};
+                    json2[i] = {};
+                    json1[i].x = new Date(json[i].x);
+                    json2[i].x = new Date(json[i].x);
+                    json1[i].y = new Date(json[i].y1);
+                    json2[i].y = new Date(json[i].y2);
+
+                }
+                var keywordObjScatter = {
+                    "key": 'Customer',
+                    "type": "scatter",
+                    "values": json1,
+                    "color": 'red',
+                    "yAxis": 1
+                };
+                var keywordObjLine = {
+                    "key": 'Subscriber',
+                    "type": "scatter",
+                    "values": json2,
+                    "color": 'blue',
+                    "yAxis": 1
+                };
+                self.SJchartData.push(keywordObjScatter,keywordObjLine)
+                self.userRidesOakland();
+        });
 
     };
 
 
     self.userRidesByArea = function(){
         self.SFchartData = [];
-        self.SJchartData = [];
 
         for(var i = 0 ; i < self.charts.length; i++){
             self.charts[i] = false;
@@ -462,42 +536,13 @@ gameOfThrones.controller('battleController',['battleService', function(battleSer
                     "color": 'blue',
                     "yAxis": 1
                 };
-                self.SFchartData.push(keywordObjScatter,keywordObjLine)
+                self.SFchartData.push(keywordObjScatter,keywordObjLine);
+
+                self.userRidesSJ();
             });
         });
 
 
-        var SJsubs = "https://raw.githubusercontent.com/kartikn27/raw_files/master/SJ_subs.json";
-        var SJcust = "https://raw.githubusercontent.com/kartikn27/raw_files/master/SJ_cus.json";
-        battleService.subscriberRides(SJsubs).then(function(resp){
-            battleService.customerRides(SJcust).then(function(resp2){
-                json1 = resp;
-                json2 = resp2;
-
-
-
-                for(var i = 0; i < json1.length;i++){
-                    json1[i].x = new Date(json1[i].x);
-                    json2[i].x = new Date(json2[i].x);
-
-                }
-                var keywordObjScatter = {
-                    "key": 'Subscriber',
-                    "type": "bar",
-                    "values": json1,
-                    "color": 'red',
-                    "yAxis": 1
-                };
-                var keywordObjLine = {
-                    "key": 'Customer',
-                    "type": "bar",
-                    "values": json2,
-                    "color": 'blue',
-                    "yAxis": 1
-                };
-                self.SJchartData.push(keywordObjScatter,keywordObjLine)
-            });
-        });
 
 
 
