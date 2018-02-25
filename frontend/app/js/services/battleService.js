@@ -18,8 +18,8 @@ gameOfThrones.factory('battleService',['$q', '$http' ,function($q, $http){
                 }
             });
         },
-        userType : function(){
-            return $http.get('https://raw.githubusercontent.com/kartikn27/raw_files/master/subscriber_count.json' ).then(function (response) {
+        userType : function(url){
+            return $http.get(url).then(function (response) {
                 if (response !== undefined && response.data !== undefined) {
                     return response.data;
                 }

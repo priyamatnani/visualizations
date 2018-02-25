@@ -88,46 +88,67 @@ gameOfThrones.controller('battleController',['battleService', function(battleSer
         }
     };
 
-    self.userType = function(){
 
-        for(var i = 0 ; i < self.charts.length; i++){
-            self.charts[i] = false;
-        }
-        self.charts[0] = true;
 
-        battleService.userType().then(function(resp){
+    self.userType3 = function(url){
+
+
+
+        battleService.userType(url).then(function(resp){
             console.log("RESP>>>",resp);
-
-            self.chartData = angular.copy(resp);
-
-            var lineAlpha = [];
-
-            i = 0;
-            self.chartData.forEach(function(d) {
-                d['value']  = +d['value'];
-
-                lineAlpha.push({x: d['label'],y: d['value']});
-                i += 1;
+            self.userAvgHours = [];
+            self.userAvgHours.push({
+                key : "Count",
+                values : resp
             });
-
-            self.data = [
-                {
-                    values: lineAlpha,
-                    key: 'Count',
-                    color: 'blue'
-                }
-
-            ];
-
             self.$apply();
 
 
         });
     };
 
+
+    self.userType2 = function(url){
+
+
+
+        battleService.userType(url).then(function(resp){
+            console.log("RESP>>>",resp);
+            self.userRideHours = [];
+            self.userRideHours.push({
+                key : "Count",
+                values : resp
+            });
+            self.userType3('https://raw.githubusercontent.com/kartikn27/raw_files/master/user_avg_hours.json');
+
+        });
+    };
+
+    self.userType = function(){
+
+        var url = "https://raw.githubusercontent.com/kartikn27/raw_files/master/subscriber_count.json";
+        for(var i = 0 ; i < self.charts.length; i++){
+            self.charts[i] = false;
+        }
+        self.charts[1] = true;
+
+
+        battleService.userType(url).then(function(resp){
+
+            self.userRideCount = [];
+            self.userRideCount.push({
+                key : "Count",
+                values : resp
+            });
+
+            self.userType2("https://raw.githubusercontent.com/kartikn27/raw_files/master/user_total_hours.json")
+
+        });
+    };
+
     self.options.userType = {
         chart: {
-            type: 'multiBarChart',
+            type: 'discreteBarChart',
             height: 450,
             margin : {
                 top: 20,
@@ -136,22 +157,74 @@ gameOfThrones.controller('battleController',['battleService', function(battleSer
                 left: 55
             },
             x: function(d){ return d.label; },
-            y: function(d){ return d.value; },
+            y: function(d){return d.value + (1e-10);},
+            showValues: true,
+            valueFormat: function(d){
+                return d3.format(',.4f')(d);
+            },
+            duration: 500,
             xAxis: {
-                axisLabel: '',
+                axisLabel: 'User Type'
                 //rotateLabels : 45,
-                staggerLabels: false
 
             },
-
-
             yAxis: {
-                axisLabel: '',
-                tickFormat: function(d){
-                    return d3.format('.02f')(d);
-                }
+                axisLabel: 'No. of Rides'
+            }
+        }
+
+    };
+
+    self.options.userType2 = {
+        chart: {
+            type: 'discreteBarChart',
+            height: 450,
+            margin : {
+                top: 20,
+                right: 20,
+                bottom: 40,
+                left: 55
             },
-            useInteractiveGuideline: false
+            x: function(d){ return d.label; },
+            y: function(d){return d.value + (1e-10);},
+            showValues: true,
+            valueFormat: function(d){
+                return d3.format(',.4f')(d);
+            },
+            duration: 500,
+            xAxis: {
+                axisLabel: 'User Type'
+                //rotateLabels : 45,
+
+            },
+            yAxis: {
+                axisLabel: 'Total hours'
+            }
+        }
+    };
+    self.options.userType3 = {
+        chart: {
+            type: 'discreteBarChart',
+            height: 450,
+            margin : {
+                top: 20,
+                right: 20,
+                bottom: 40,
+                left: 55
+            },
+            x: function(d){ return d.label; },
+            y: function(d){return d.value + (1e-10);},
+            showValues: true,
+            valueFormat: function(d){
+                return d3.format(',.4f')(d);
+            },
+            duration: 500,
+            xAxis: {
+                axisLabel: 'User Type'
+            },
+            yAxis: {
+                axisLabel: 'Average Hours'
+            }
         }
     };
 
@@ -585,6 +658,45 @@ gameOfThrones.controller('battleController',['battleService', function(battleSer
         self.api.refresh();
 
     });
+
+
+
+
+
+    // self.userRideCount = [
+    //     {
+    //         key: "",
+    //         values: [
+    //             {
+    //                 "label" : "Subscriber" ,
+    //                 "value" : 142882
+    //             } ,
+    //             {
+    //                 "label" : "Customer" ,
+    //                 "value" : 28910
+    //             }
+    //         ]
+    //     }
+    // ]
+    //
+    // self.userRideHours = [
+    //     {
+    //         key: "",
+    //         values: [
+    //             {
+    //                 "label" : "Subscriber" ,
+    //                 "value" : 22796.408
+    //             } ,
+    //             {
+    //                 "label" : "Customer" ,
+    //                 "value" : 32147.171
+    //             }
+    //         ]
+    //     }
+    // ]
+
+
+
 
 
 

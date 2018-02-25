@@ -77,7 +77,16 @@ div
                                 div(ng-if= "BC.charts[0] == true")
                                     nvd3(options="BC.options.bikeRides", data="BC.data", class="with-3d-shadow with-transitions")
                                 div(ng-if= "BC.charts[1] == true")
-                                    nvd3(options="BC.options.userType", data="BC.chartData", class="with-3d-shadow with-transitions")
+                                    nvd3(options = "BC.options.userType", data = "BC.userRideCount")
+
+                                    div.layout-column.flex(layout-gt-sm="row")
+
+                                        div(flex-gt-sm="50")
+                                            nvd3(options = "BC.options.userType3", data = "BC.userAvgHours")
+                                        div(flex-gt-sm="50")
+                                            nvd3(options = "BC.options.userType2", data = "BC.userRideHours")
+
+
                                 div(ng-if= "BC.charts[2] == true")
                                     nvd3(options="BC.options.hourRides", data="BC.dataHourRides", class="with-3d-shadow with-transitions")
 
