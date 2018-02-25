@@ -1,5 +1,5 @@
 
-var gameOfThrones = angular.module('gameOfThrones',['ui.router', 'ngMaterial', 'ngAnimate','ngAria','nvd3','nvd3ChartDirectives']);
+var gameOfThrones = angular.module('gameOfThrones',['ui.router', 'ngMaterial', 'ngAnimate','ngAria','nvd3']);
 
 
 gameOfThrones.config(['$stateProvider','$urlRouterProvider', '$qProvider', function($stateProvider,$urlRouterProvider, $qProvider){
