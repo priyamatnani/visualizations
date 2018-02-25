@@ -423,6 +423,118 @@ gameOfThrones.controller('battleController',['battleService', function(battleSer
 
 
     };
+
+
+    self.userRidesByArea = function(){
+        self.SFchartData = [];
+        self.SJchartData = [];
+
+        for(var i = 0 ; i < self.charts.length; i++){
+            self.charts[i] = false;
+        }
+        self.charts[4] = true;
+
+        var SFsubs = "https://raw.githubusercontent.com/kartikn27/raw_files/master/SF_subs.json";
+        var SFcust = "https://raw.githubusercontent.com/kartikn27/raw_files/master/SF_cus.json";
+        battleService.subscriberRides(SFsubs).then(function(resp){
+            battleService.customerRides(SFcust).then(function(resp2){
+                json1 = resp;
+                json2 = resp2;
+
+
+
+                for(var i = 0; i < json1.length;i++){
+                    json1[i].x = new Date(json1[i].x);
+                    json2[i].x = new Date(json2[i].x);
+
+                }
+                var keywordObjScatter = {
+                    "key": 'Subscriber',
+                    "type": "bar",
+                    "values": json1,
+                    "color": 'red',
+                    "yAxis": 1
+                };
+                var keywordObjLine = {
+                    "key": 'Customer',
+                    "type": "bar",
+                    "values": json2,
+                    "color": 'blue',
+                    "yAxis": 1
+                };
+                self.SFchartData.push(keywordObjScatter,keywordObjLine)
+            });
+        });
+
+
+        var SJsubs = "https://raw.githubusercontent.com/kartikn27/raw_files/master/SJ_subs.json";
+        var SJcust = "https://raw.githubusercontent.com/kartikn27/raw_files/master/SJ_cus.json";
+        battleService.subscriberRides(SJsubs).then(function(resp){
+            battleService.customerRides(SJcust).then(function(resp2){
+                json1 = resp;
+                json2 = resp2;
+
+
+
+                for(var i = 0; i < json1.length;i++){
+                    json1[i].x = new Date(json1[i].x);
+                    json2[i].x = new Date(json2[i].x);
+
+                }
+                var keywordObjScatter = {
+                    "key": 'Subscriber',
+                    "type": "bar",
+                    "values": json1,
+                    "color": 'red',
+                    "yAxis": 1
+                };
+                var keywordObjLine = {
+                    "key": 'Customer',
+                    "type": "bar",
+                    "values": json2,
+                    "color": 'blue',
+                    "yAxis": 1
+                };
+                self.SJchartData.push(keywordObjScatter,keywordObjLine)
+            });
+        });
+
+
+
+    };
+
+    self.options.SFrides = {
+        chart: {
+            type: 'multiChart',
+            height: 450,
+            margin : {
+                top: 30,
+                right: 60,
+                bottom: 50,
+                left: 70
+            },
+            color: d3.scale.category10().range(),
+            //useInteractiveGuideline: true,
+            duration: 500,
+            xAxis: {
+                tickFormat: function(d){
+                    return ( days[new Date(d).getDay()] + ' ' + d3.time.format('%d-%m-%y')(new Date(d)))
+
+                }
+            },
+            yAxis1: {
+                tickFormat: function(d){
+                    return d3.format('f')(d);
+                }
+            },
+            yAxis2: {
+                tickFormat: function(d){
+                    return d3.format('f')(d);
+                }
+            }
+        }
+    };
+
     setTimeout(function(){
         console.log('scope api:', self.api);
         self.api.refresh();

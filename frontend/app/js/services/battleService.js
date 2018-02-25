@@ -67,6 +67,26 @@ gameOfThrones.factory('battleService',['$q', '$http' ,function($q, $http){
                     return $q.reject(response);
                 }
             });
+        },
+        subscriberRides : function(obj){
+            return $http.get(obj).then(function (response) {
+                if (response !== undefined && response.data !== undefined) {
+                    return response.data;
+                }
+                else {
+                    return $q.reject(response);
+                }
+            });
+        },
+        customerRides : function(obj){
+            return $http.get(obj).then(function (response) {
+                if (response !== undefined && response.data !== undefined) {
+                    return response.data;
+                }
+                else {
+                    return $q.reject(response);
+                }
+            });
         }
 
 

@@ -24,6 +24,8 @@ div(ng-controller="battleController as BC")
                                         p Number of rides per day
                                     md-list-item(ng-click="BC.dateRides()")
                                         p Rides across all dates
+                                    md-list-item(ng-click="BC.userRidesByArea()")
+                                        p Areawise Rides
 
                                     md-divider
 
@@ -37,6 +39,9 @@ div(ng-controller="battleController as BC")
                                 nvd3(options="BC.options.dayRides", data="BC.chartData")
                             div(ng-if="BC.charts[3] == true")
                                 nvd3(options="BC.options.dateRides" data="BC.chartData")
+                            div(ng-if="BC.charts[4] == true")
+                                nvd3(options="BC.options.SFrides" data="BC.SFchartData")
+                                nvd3(options="BC.options.SFrides" data="BC.SJchartData")
 
 
 
