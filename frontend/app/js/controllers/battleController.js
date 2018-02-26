@@ -30,9 +30,9 @@ gameOfThrones.controller('battleController',['battleService', function(battleSer
                     d['bike_count'] = +d['bike_count'];
                     d['rides']  = +d['rides'];
 
-                self.chartLabels.push(d['StartStation']);
-                lineAlpha.push({x: i+1, label: d['StartStation'],y: d['bike_count']});
-                lineBeta.push({x: i+1 , label: d['StartStation'],y: d['rides']});
+                // self.chartLabels.push(d['StartStation']);
+                lineAlpha.push({x:d['StartStation'], y: d['bike_count']});
+                lineBeta.push({x: d['StartStation'] , y: d['rides']});
                     i += 1;
                 });
 
@@ -64,21 +64,21 @@ gameOfThrones.controller('battleController',['battleService', function(battleSer
             margin : {
                 top: 20,
                 right: 20,
-                bottom: 40,
-                left: 55
+                bottom: 70,
+                left: 65
             },
             x: function(d){ return d.x; },
             y: function(d){ return d.y; },
             xAxis: {
-                axisLabel: self.chartLabels,
-                //rotateLabels : 45,
+                axisLabel: 'Stations',
+                rotateLabels : 25,
                 staggerLabels: false
 
             },
 
 
             yAxis: {
-                axisLabel: '',
+                axisLabel: 'Rides & Bike count',
                 tickFormat: function(d){
                     return d3.format('.02f')(d);
                 }
@@ -170,7 +170,7 @@ gameOfThrones.controller('battleController',['battleService', function(battleSer
                 top: 20,
                 right: 20,
                 bottom: 40,
-                left: 55
+                left: 65
             },
             x: function(d){ return d.label; },
             y: function(d){return d.value + (1e-10);},
@@ -197,7 +197,7 @@ gameOfThrones.controller('battleController',['battleService', function(battleSer
                 top: 20,
                 right: 20,
                 bottom: 40,
-                left: 55
+                left: 65
             },
             x: function(d){ return d.label; },
             y: function(d){return d.value + (1e-10);},
@@ -269,12 +269,12 @@ gameOfThrones.controller('battleController',['battleService', function(battleSer
                 top: 20,
                 right: 20,
                 bottom: 40,
-                left: 55
+                left: 70
             },
             x: function(d){ return d.x; },
             y: function(d){ return d.y; },
             xAxis: {
-                // axisLabel: '',
+                axisLabel: 'Zipcode',
                 // rotateLabels : 45
                 // staggerLabels: false
 
@@ -282,9 +282,10 @@ gameOfThrones.controller('battleController',['battleService', function(battleSer
 
 
             yAxis: {
-                axisLabel: '',
+                axisLabel: 'Rides & Hours',
+                rotateLabels: -10 ,
                 tickFormat: function(d){
-                    return d3.format('.02f')(d);
+                    return d3.format('f')(d);
                 }
             },
             useInteractiveGuideline: false
@@ -380,13 +381,13 @@ gameOfThrones.controller('battleController',['battleService', function(battleSer
             },
             duration: 350,
             xAxis: {
-                axisLabel: 'X Axis',
+                axisLabel: 'Dates',
                 tickFormat: function(d){
                     return ( days[new Date(d).getDay()] + ' ' + d3.time.format('%d-%m-%y')(new Date(d)))
                 }
             },
             yAxis: {
-                axisLabel: 'Y Axis',
+                axisLabel: 'Rides',
                 tickFormat: function(d){
                     return d3.format('f')(d);
                 },
@@ -416,7 +417,7 @@ gameOfThrones.controller('battleController',['battleService', function(battleSer
                 top: 20,
                 right: 20,
                 bottom: 40,
-                left: 55
+                left: 65
             },
             x: function(d){ return d.x; },
             y: function(d){ return d.y; },
@@ -623,6 +624,7 @@ gameOfThrones.controller('battleController',['battleService', function(battleSer
                 }
             },
             yAxis1: {
+                axisLabel: 'Number of Rides',
                 tickFormat: function(d){
                     return d3.format('f')(d);
                 }
@@ -702,7 +704,7 @@ gameOfThrones.controller('battleController',['battleService', function(battleSer
                 top: 20,
                 right: 20,
                 bottom: 40,
-                left: 55
+                left: 65
             },
             x: function(d){ return d.x; },
             y: function(d){ return d.y; },
@@ -715,9 +717,9 @@ gameOfThrones.controller('battleController',['battleService', function(battleSer
 
 
             yAxis: {
-                axisLabel: '',
+                axisLabel: 'Bike count & Subscriber count',
                 tickFormat: function(d){
-                    return d3.format('.02f')(d);
+                    return d3.format('f')(d);
                 }
             },
             useInteractiveGuideline: false

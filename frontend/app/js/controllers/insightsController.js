@@ -5,8 +5,15 @@ gameOfThrones.controller('insightsController',['battleService', function(battleS
     console.log("insightsController>>>>")
 
     var self = this;
-    battleService.dataInsights().then(function(resp){
-        self.tableData = resp;
-        self.tableData = self.tableData.slice(0,20);
-    });
+
+
+    self.getData = function(){
+        battleService.dataInsights().then(function(resp){
+            self.tableData = resp;
+            self.tableData = self.tableData.slice(0,20);
+        });
+    };
+
+    self.getData();
+
 }]);

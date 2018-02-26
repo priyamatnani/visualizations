@@ -71,3 +71,28 @@ tr td:hover { background: #666; color: #FFF; }
 .recPdata1{
     font-size: 22px;
 }
+
+/deep/ .mat-tab-color{
+    color: white;
+    font-weight: bold;
+}
+
+.navBarC{
+    background-color:#D3D3D3;
+}
+
+.copyright{
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.md-button.md-raised:not([disabled]) {
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+}
+.md-button.blue{
+    background-color: deepskyblue;,
+    /*color: white;*/
+}
+.font-14{
+    font-size:14px;
+}

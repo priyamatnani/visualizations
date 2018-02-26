@@ -3,11 +3,27 @@ link(rel="stylesheet", type="text/css", href="../css/style.css")
 div
 
     md-content
-        md-tabs(md-dynamic-height='', md-border-bottom='')
+        md-tabs(md-dynamic-height='', md-border-bottom='', class="navBarC")
             div(ng-controller="insightsController as IC")
-                md-tab(label='Data insights')
+                md-tab(label='Data insights', class="mat-tab-color", ng-click="IC.getData()")
                     md-content.md-padding
-                        //h1.md-display-2 Boob man
+                        md-button(class="md-raised blue", md-tooltip="Refresh", style="float:right", ng-click="IC.getData()")
+                            i(class="fa fa-refresh") &nbsp Refresh
+                        h1 That's how the data looks
+
+                        md-card(style="width: 800px")
+                            md-card-content
+                                p Number of Columns: 11
+                                p Number of Rows: 171,792
+                                p Every row indicates a unique ride taken by a user from one station to another in and around San Francisco Bay Area.
+                                p Several Exploratory analysis have been done on this data and displayed in observations and recommendations tabs.
+                                p The data ranges across 6 months from March to August.
+                                p There is a Refresh Button on every tab which will fetch the latest data and alter the graphs accordingly.
+
+                                p
+                                    b
+                                        i Hiting the refresh button will auto update the graphs and tables with the latest data.
+
                         div(class="table-wrapper")
                             div(class="table-scroll")
                                 table(class="obsTable")
@@ -16,7 +32,7 @@ div
                                             th Trip ID
                                             th Duration
                                             th Start Date
-                                            th StartS tation
+                                            th Start Station
                                             th Start Terminal
                                             th End Date
                                             th End Station
@@ -42,7 +58,7 @@ div
 
 
             div(ng-controller="battleController as BC")
-                md-tab(label='Observations', ng-click="BC.zipcodeRidesHours()")
+                md-tab.white(label='Observations', ng-click="BC.dateRides()")
                     md-content.md-padding
                         div.layout-column.flex(layout-gt-sm="row")
                             div(flex-gt-sm="30")
@@ -53,12 +69,15 @@ div
                                     md-subheader(class="md-no-sticky") OBSERVATIONS
                                         //md-list-item
                                         //    p
-                                        md-list-item(ng-click="BC.zipcodeRidesHours()")
-                                            p Rides vs Hours by area code
-                                        md-list-item(ng-click="BC.dayRides()")
-                                            p Rides per days of the week
                                         md-list-item(ng-click="BC.dateRides()")
                                             p Rides across all dates
+
+                                        md-list-item(ng-click="BC.dayRides()")
+                                            p Rides per days of the week
+
+                                        md-list-item(ng-click="BC.zipcodeRidesHours()")
+                                            p(class="font-14") Rides vs Hours by area code
+
                                         md-list-item(ng-click="BC.userRidesByArea()")
                                             p Top 3 cities
                                         md-list-item(ng-click="BC.popularTable()")
@@ -67,13 +86,16 @@ div
                                         md-divider
 
                             div(flex-gt-sm="70")
-                                i(class="fa fa-refresh", title="Refresh")
+                                md-button(class="md-raised blue", md-tooltip="Refresh", style="float:right", ng-click="BC.dateRides()")
+                                    i(class="fa fa-refresh") &nbsp Refresh
+                                //i(class="fa fa-refresh", title="Refresh")
                                 //div(ng-if= "BC.charts[0] == true")
                                 //    h1 Number of hours and rides spent for top 10 Areas(Zipcodes)
                                 //    nvd3(options="BC.options.userType", data="BC.chartData")
                                 div(ng-if= "BC.charts[1] == true")
                                     h1 Number of hours and rides spent for top 10 Areas(Zipcodes)
-                                    nvd3(options="BC.options.zipcodeRide", data="BC.data", class="with-3d-shadow with-transitions")
+                                    nvd3(options="BC.options.zipcodeRide", data="BC.data", class="with-3d-shadow with-transitions", style="padding-left:10px")
+                                    p(class="recPdata1") It is observed that the number of rides in an area is proportional to the number of hours spent on the bike
                                 div(ng-if= "BC.charts[2] == true")
                                     h1 Distribution of rides as per days of the week
                                     nvd3(options="BC.options.dayRides", data="BC.chartData")
@@ -92,7 +114,7 @@ div
                                     h2 Oakland
                                     nvd3(options="BC.options.SFrides" data="BC.OakchartData")
                                 div(ng-if="BC.charts[5] == true")
-                                    h1 Most popular 200 routes
+                                    h1 Most popular 40 routes
                                     div(class="table-wrapper")
                                         div(class="table-scroll")
                                             table(class="obsTable")
@@ -113,7 +135,7 @@ div
 
             div(ng-controller="battleController as BC")
 
-                md-tab(label='Recommendations', ng-click="BC.bikeRides()")
+                md-tab.white(label='Recommendations', ng-click="BC.bikeRides()")
                     md-content.md-padding
                         div.layout-column.flex(layout-gt-sm="row")
                             div(flex-gt-sm="30")
@@ -135,11 +157,12 @@ div
 
                             div(flex-gt-sm="70")
                                 //md-button.success(ng-click="BC.chart1()") Refresh
-                                i(class="fa fa-refresh", ng-click="BC.bikeRides()", title="Refresh")
+                                md-button(class="md-raised blue", md-tooltip="Refresh", style="float:right", ng-click="BC.bikeRides()")
+                                    i(class="fa fa-refresh") &nbsp Refresh
                                 div(ng-if= "BC.charts[0] == true")
                                     h1 Popular Stations should have more bikes!!
                                     nvd3(options="BC.options.bikeRides", data="BC.data", class="with-3d-shadow with-transitions")
-                                    md-card
+                                    md-card(style="margin-top:20px")
                                         md-card-content
                                             p(class="recPdata")
                                                 The San Francisco Cal train station is the most popular station for people to pick bikes from.
@@ -159,7 +182,11 @@ div
                                     md-card
                                         md-card-content
                                             p(class="cardCP")
-                                                i Station such as Temporary Transbay Terminal (Howard at Beale) has many big organizations such as Gap, Twilio, BlackRock, UCB surrounding it, but the utilization of bikes is very less as comapred to stations such as SF Caltrain. These organizations are very good potential customers. So, there ough to be a marketing strategy to promote bikes are attract these customers. Number of rides should be increased from 5000 odd to 12000. Similar strategy should be applied to similar locations.
+                                                i Station such as Temporary Transbay Terminal (Howard at Beale) has many big organizations such as Gap, Twilio, BlackRock, UCB surrounding it, but the utilization of bikes is very less as compared to stations such as SF Caltrain.
+                                            p(class="cardCP")
+                                                i These organizations are very good potential customers. So, there ough to be a marketing strategy to promote bikes are attract these customers.
+                                            p(class="cardCP")
+                                                i Number of rides should be increased from 5000 odd to 12000. Similar strategy should be applied to similar locations.
 
 
                                 div(ng-if= "BC.charts[1] == true")
@@ -189,7 +216,12 @@ div
                                         md-card-content
                                             p(class="cardCP")
                                                 i Subscribers are long duration riders while Customers are long duration riders.
-                                                i Customers are less frequent riders, but usually ride for more time. An attempt should be made to convert these customers to subscribers. Fo example, there should be attractive subscription plans for a a customer, who probably rides only on Weekends for longer time and try to convert him to subscriber. The average ride time pf subscriber should be increased.
+                                            p(class="cardCP")
+                                                i Customers are less frequent riders, but usually ride for more time. An attempt should be made to convert these customers to subscribers.
+                                            p(class="cardCP")
+                                                i For example, there should be attractive subscription plans for a a customer, who probably rides only on Weekends for longer time and try to convert him to subscriber.
+                                            p(class="cardCP")
+                                                i The average ride time of subscriber should be increased.
 
 
 
@@ -201,9 +233,23 @@ div
                                     md-card
                                         md-card-content
                                             p(class="cardCP")
-                                                i As 8am, 9am and 5pm, 6pm are the most busiest times, it is evident that office employees are the largest consumer base. An attempt should be made to attract these customers. From above observation it is seen that not many people opt for rides around Temporary Transbay Terminal (Howard at Beale) has many big organizations such as Gap, Twilio, BlackRock, UCB surrounding it.
+                                                i As 8am, 9am and 5pm, 6pm are the most busiest times, it is evident that office employees are the largest consumer base. An attempt should be made to attract these customers.
+                                            p(class="cardCP")
+                                                i From above observation it is seen that not many people opt for rides around Temporary Transbay Terminal (Howard at Beale) has many big organizations such as Gap, Twilio, BlackRock, UCB surrounding it.
 
 
                                 div(ng-if="BC.charts[3] == true")
-                                    h1 ass kartik tharki
+                                    h1 Too many bikes in the Non-popular areas!!
                                     nvd3(options="BC.options.zipData", data="BC.zipData", class="with-3d-shadow with-transitions")
+                                    md-card
+                                        md-card-content
+                                            p(class="cardCP") It can be seen from the above table, that area with zip code 94107 has 15655 New users and 542 bikes.However, area with zip code 94110 has alomost same number of bikes but only 1571 new users join from that area.Thus there is non-uniformity in the distribution of bikes as per the new users.For zip code 94110, the bike to new users ratio is 1:3, for every three new users there is 1 bike. However, for zip code 94107, for every 28 new users there is 1 bike.
+                                    h3 Recommendation:
+                                        md-card
+                                            md-card-content
+                                                p(class="cardCP")
+                                                    i More the new users more should be the number of bikes. There should be a uniformity in the ratio of new users and bikes.
+                                                p(class="cardCP")
+                                                    i Perhaps, the bikes from area with zip code 94103 should be moved to an area where people are likely to subscribe more.
+
+p(class="copyright") &copy; Kartik Nagre 2018
