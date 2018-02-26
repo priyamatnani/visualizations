@@ -97,6 +97,8 @@ div
                                             p Type of user division
                                         md-list-item(ng-click="BC.hourRides()")
                                             p Rides per hour
+                                        md-list-item(ng-click="BC.zipCodeRides()")
+                                            p Zipcode Rides
 
                                         md-divider
 
@@ -171,3 +173,5 @@ div
                                                 i As 8am, 9am and 5pm, 6pm are the most busiest times, it is evident that office employees are the largest consumer base. An attempt should be made to attract these customers. From above observation it is seen that not many people opt for rides around Temporary Transbay Terminal (Howard at Beale) has many big organizations such as Gap, Twilio, BlackRock, UCB surrounding it.
 
 
+                                div(ng-if="BC.charts[3] == true")
+                                    h1 ass kartik

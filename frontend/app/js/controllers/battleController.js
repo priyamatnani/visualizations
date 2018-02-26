@@ -21,7 +21,6 @@ gameOfThrones.controller('battleController',['battleService', function(battleSer
         self.charts[0] = true;
 
         battleService.bikeRides().then(function(resp){
-            console.log("RESP>>>",resp)
 
             self.chartData = angular.copy(resp);
                 var lineAlpha = [], lineBeta = [];
@@ -95,7 +94,6 @@ gameOfThrones.controller('battleController',['battleService', function(battleSer
 
 
         battleService.userType(url).then(function(resp){
-            console.log("RESP>>>",resp);
             self.userAvgHours = [];
             self.userAvgHours.push({
                 key : "Count",
@@ -113,7 +111,6 @@ gameOfThrones.controller('battleController',['battleService', function(battleSer
 
 
         battleService.userType(url).then(function(resp){
-            console.log("RESP>>>",resp);
             self.userRideHours = [];
             self.userRideHours.push({
                 key : "Count",
@@ -227,7 +224,6 @@ gameOfThrones.controller('battleController',['battleService', function(battleSer
         self.charts[1] = true;
 
         battleService.zipcodeRidesHours().then(function(resp){
-            console.log("RESP>>>",resp)
 
             self.zipcodeData = angular.copy(resp);
             var lineAlpha = [], lineBeta = [];
@@ -303,10 +299,7 @@ gameOfThrones.controller('battleController',['battleService', function(battleSer
         self.charts[2] = true;
 
         battleService.dayRides().then(function(resp){
-            console.log("RESP>>>",resp);
-
             self.chartData = [];
-
             self.chartData = angular.copy(resp);
 
 
@@ -342,7 +335,6 @@ gameOfThrones.controller('battleController',['battleService', function(battleSer
         self.charts[3] = true;
 
         battleService.dateRides().then(function(resp){
-            console.log("RESP>>>",resp);
 
             var json = angular.copy(resp);
 
@@ -663,6 +655,18 @@ gameOfThrones.controller('battleController',['battleService', function(battleSer
             self.tableParams = new NgTableParams({}, { dataset: self.popularStationTable});
         });
    };
+
+   self.zipCodeRides = function () {
+       for(var i = 0 ; i < self.charts.length; i++){
+           self.charts[i] = false;
+       }
+       self.charts[3] = true;
+       battleService.zipCodeRides().then(function(resp){
+           
+
+
+       });
+   }
 
 
 
