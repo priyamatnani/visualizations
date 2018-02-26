@@ -1,3 +1,5 @@
+link(rel="stylesheet", type="text/css", href="../css/style.css")
+
 div
 
     md-content
@@ -17,7 +19,7 @@ div
 
 
                                 md-list( ng-cloak)
-                                    md-subheader(class="md-no-sticky") Single Action Checkboxes
+                                    md-subheader(class="md-no-sticky") OBSERVATIONS
                                         //md-list-item
                                         //    p
                                         md-list-item(ng-click="BC.zipcodeRidesHours()")
@@ -28,12 +30,15 @@ div
                                             p Rides across all dates
                                         md-list-item(ng-click="BC.userRidesByArea()")
                                             p Areawise Rides
+                                        md-list-item(ng-click="BC.popularTable()")
+                                            p Table
 
                                         md-divider
 
                             div(flex-gt-sm="70")
                                 i(class="fa fa-refresh", title="Refresh")
                                 div(ng-if= "BC.charts[0] == true")
+                                    h1 Number of hours and rides spent for top 10 Areas(Zipcodes)
                                     nvd3(options="BC.options.userType", data="BC.chartData")
                                 div(ng-if= "BC.charts[1] == true")
                                     nvd3(options="BC.options.zipcodeRide", data="BC.data", class="with-3d-shadow with-transitions")
@@ -45,7 +50,19 @@ div
                                     nvd3(options="BC.options.SFrides" data="BC.SFchartData")
                                     nvd3(options="BC.options.SFrides" data="BC.SJchartData")
                                     nvd3(options="BC.options.SFrides" data="BC.OakchartData")
-
+                                div(ng-if="BC.charts[5] == true")
+                                    div(id="table-wrapper")
+                                        div(id="table-scroll")
+                                            table(class="obsTable")
+                                                thead
+                                                    tr
+                                                        th Start Station
+                                                        th End Station
+                                                        th Rides
+                                                tr(ng-repeat="row in BC.popularStationTable")
+                                                    td {{row.StartStation}}
+                                                    td {{row.EndStation}}
+                                                    td {{row.rides}}
 
 
 
@@ -61,9 +78,9 @@ div
 
 
                                 md-list( ng-cloak)
-                                    md-subheader(class="md-no-sticky") Single Action Checkboxes
+                                    md-subheader(class="md-no-sticky") RECOMMENDATIONS
                                         md-list-item(ng-click="BC.bikeRides() ")
-                                            p Bikes vs Rides done
+                                            p Bikes vs Rides Ratio
                                         md-list-item(ng-click="BC.userType()")
                                             p Type of user division
                                         md-list-item(ng-click="BC.hourRides()")
@@ -75,19 +92,70 @@ div
                                 //md-button.success(ng-click="BC.chart1()") Refresh
                                 i(class="fa fa-refresh", ng-click="BC.bikeRides()", title="Refresh")
                                 div(ng-if= "BC.charts[0] == true")
+                                    h1 Popular Stations should have more bikes!!
                                     nvd3(options="BC.options.bikeRides", data="BC.data", class="with-3d-shadow with-transitions")
+                                    md-card
+                                        md-card-content
+                                            p(class="recPdata")
+                                                The San Francisco Cal train station is the most popular station for people to pick bikes from.
+                                                There are a total of 392 bikes at the station. The second most popular station is Harry Bridges Plaza, it also has around same number of bikes.
+                                                However, the number of rides at SF Caltrain station is 4500 more than Harry Bridges Plaza.
+                                                The bike to ride ratio at SF Caltrain St is 1:33 and at Harry Bridges Plaza is 1:21 For the 10th most popluar station it is 1:13
+
+                                    h3 Issue: Address the bikes to number of rides ratio at the popular stations
+                                    h3 Recommendation 1:
+                                    md-card
+                                        md-card-content
+                                            p(class="cardCP")
+                                                i If there are 390 bikes for 8300 rides at Harry Bridges Plaza and 386 bikes for 5240 rides at 4th St Market, the number of bikes for SF Caltrain St should be much more than 390 for almost 13,000 rides.
+
+                                    h3 Issue: Need to target specific locations
+                                    h3 Recommendation 2:
+                                    md-card
+                                        md-card-content
+                                            p(class="cardCP")
+                                                i Station such as Temporary Transbay Terminal (Howard at Beale) has many big organizations such as Gap, Twilio, BlackRock, UCB surrounding it, but the utilization of bikes is very less as comapred to stations such as SF Caltrain. These organizations are very good potential customers. So, there ough to be a marketing strategy to promote bikes are attract these customers. Number of rides should be increased from 5000 odd to 12000. Similar strategy should be applied to similar locations.
+
+
                                 div(ng-if= "BC.charts[1] == true")
+                                    h1 Got to have impressive plans for subscribers!!
                                     nvd3(options = "BC.options.userType", data = "BC.userRideCount")
+                                    p(style="text-align: center")
+                                        b Subscribers vs Customers in Number
 
                                     div.layout-column.flex(layout-gt-sm="row")
 
                                         div(flex-gt-sm="50")
                                             nvd3(options = "BC.options.userType3", data = "BC.userAvgHours")
+                                            p(style="text-align: center")
+                                                b Avg minutes per ride for Subscribers vs Customers
                                         div(flex-gt-sm="50")
                                             nvd3(options = "BC.options.userType2", data = "BC.userRideHours")
+                                            p(style="text-align: center")
+                                                b Total hours rode by Subscribers vs Customers
+
+                                    md-card
+                                        md-card-content
+                                            p(class="cardCP") This observation is interesting.. The average ride time utlization time is much more for customers than subscribers. This is true even if the number of subscribers are much more than cuctomers. There are 4 times more subscribers than customers, but the average ride time utilization of customers is 6 times that of subscribers In terms of percentage, numeber of subscribers are 394% greater than customers, but average ride time of customers is 577% more than subscribers.
+
+                                    h3 Issue: Huge gap between Subscriber and Customer's riding duration
+                                    h3 Recommendation:
+                                    md-card
+                                        md-card-content
+                                            p(class="cardCP")
+                                                i Subscribers are long duration riders while Customers are long duration riders.
+                                                i Customers are less frequent riders, but usually ride for more time. An attempt should be made to convert these customers to subscribers. Fo example, there should be attractive subscription plans for a a customer, who probably rides only on Weekends for longer time and try to convert him to subscriber. The average ride time pf subscriber should be increased.
+
+
 
 
                                 div(ng-if= "BC.charts[2] == true")
+                                    h1 Office Employees are the Boss!!
                                     nvd3(options="BC.options.hourRides", data="BC.dataHourRides", class="with-3d-shadow with-transitions")
+                                    h1 Recommendation:
+                                    md-card
+                                        md-card-content
+                                            p(class="cardCP")
+                                                i As 8am, 9am and 5pm, 6pm are the most busiest times, it is evident that office employees are the largest consumer base. An attempt should be made to attract these customers. From above observation it is seen that not many people opt for rides around Temporary Transbay Terminal (Howard at Beale) has many big organizations such as Gap, Twilio, BlackRock, UCB surrounding it.
 
 

@@ -651,41 +651,18 @@ gameOfThrones.controller('battleController',['battleService', function(battleSer
 
 
 
+   self.popularTable = function(){
+       for(var i = 0 ; i < self.charts.length; i++){
+           self.charts[i] = false;
+       }
+       self.charts[5] = true;
 
-
-    // self.userRideCount = [
-    //     {
-    //         key: "",
-    //         values: [
-    //             {
-    //                 "label" : "Subscriber" ,
-    //                 "value" : 142882
-    //             } ,
-    //             {
-    //                 "label" : "Customer" ,
-    //                 "value" : 28910
-    //             }
-    //         ]
-    //     }
-    // ]
-    //
-    // self.userRideHours = [
-    //     {
-    //         key: "",
-    //         values: [
-    //             {
-    //                 "label" : "Subscriber" ,
-    //                 "value" : 22796.408
-    //             } ,
-    //             {
-    //                 "label" : "Customer" ,
-    //                 "value" : 32147.171
-    //             }
-    //         ]
-    //     }
-    // ]
-
-
+        battleService.popularStations().then(function(resp){
+            self.popularStationTable = resp;
+            self.popularStationTable = self.popularStationTable.slice(0,99)
+            self.tableParams = new NgTableParams({}, { dataset: self.popularStationTable});
+        });
+   };
 
 
 
