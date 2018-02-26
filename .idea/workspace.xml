@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2d65b549-fdf8-4214-82c3-8471d38786f3" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/app/css/style.css" afterPath="$PROJECT_DIR$/frontend/app/css/style.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/app/js/controllers/battleController.js" afterPath="$PROJECT_DIR$/frontend/app/js/controllers/battleController.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/app/js/controllers/insightsController.js" afterPath="$PROJECT_DIR$/frontend/app/js/controllers/insightsController.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/app/js/services/battleService.js" afterPath="$PROJECT_DIR$/frontend/app/js/services/battleService.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/app/view/dashboard.html" afterPath="$PROJECT_DIR$/frontend/app/view/dashboard.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/app/view/dashboard.jade" afterPath="$PROJECT_DIR$/frontend/app/view/dashboard.jade" />
@@ -20,11 +21,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="battleController.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="battleController.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/frontend/app/js/controllers/battleController.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="530">
-              <caret line="698" column="32" lean-forward="false" selection-start-line="698" selection-start-column="19" selection-end-line="698" selection-end-column="32" />
+            <state relative-caret-position="262">
+              <caret line="653" column="74" lean-forward="false" selection-start-line="653" selection-start-column="74" selection-end-line="653" selection-end-column="74" />
               <folding>
                 <element signature="e#6600#7291#0" expanded="false" />
                 <element signature="e#7647#8181#0" expanded="false" />
@@ -52,8 +53,18 @@
       <file leaf-file-name="battleService.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/frontend/app/js/services/battleService.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="495">
-              <caret line="103" column="31" lean-forward="false" selection-start-line="103" selection-start-column="31" selection-end-line="103" selection-end-column="31" />
+            <state relative-caret-position="75">
+              <caret line="5" column="36" lean-forward="false" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="36" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="insightsController.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/frontend/app/js/controllers/insightsController.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="9" column="52" lean-forward="false" selection-start-line="9" selection-start-column="52" selection-end-line="9" selection-end-column="52" />
               <folding />
             </state>
           </provider>
@@ -69,11 +80,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dashboard.jade" pinned="false" current-in-tab="true">
+      <file leaf-file-name="dashboard.jade" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/frontend/app/view/dashboard.jade">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="130">
-              <caret line="9" column="46" lean-forward="false" selection-start-line="9" selection-start-column="42" selection-end-line="9" selection-end-column="46" />
+            <state relative-caret-position="345">
+              <caret line="23" column="54" lean-forward="true" selection-start-line="23" selection-start-column="54" selection-end-line="23" selection-end-column="54" />
               <folding />
             </state>
           </provider>
@@ -82,8 +93,8 @@
       <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/frontend/app/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="495">
-              <caret line="56" column="16" lean-forward="true" selection-start-line="56" selection-start-column="16" selection-end-line="56" selection-end-column="16" />
+            <state relative-caret-position="300">
+              <caret line="47" column="0" lean-forward="true" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -114,6 +125,7 @@
       <find>RESP</find>
       <find>console.</find>
       <find>console.log</find>
+      <find>id=</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -129,14 +141,14 @@
         <option value="$PROJECT_DIR$/angular_setup/frontend/app/js/controllers/battleController.js" />
         <option value="$PROJECT_DIR$/angular_setup/frontend/app/view/dashboard.jade" />
         <option value="$PROJECT_DIR$/frontend/app/libs/nvd3-directives.js" />
-        <option value="$PROJECT_DIR$/frontend/app/js/controllers/insightsController.js" />
         <option value="$PROJECT_DIR$/frontend/app/app.js" />
         <option value="$PROJECT_DIR$/frontend/app/libs/ng-table.min.js" />
         <option value="$PROJECT_DIR$/frontend/app/index.jade" />
-        <option value="$PROJECT_DIR$/frontend/app/css/style.css" />
         <option value="$PROJECT_DIR$/frontend/app/js/services/battleService.js" />
-        <option value="$PROJECT_DIR$/frontend/app/js/controllers/battleController.js" />
+        <option value="$PROJECT_DIR$/frontend/app/css/style.css" />
         <option value="$PROJECT_DIR$/frontend/app/view/dashboard.jade" />
+        <option value="$PROJECT_DIR$/frontend/app/js/controllers/insightsController.js" />
+        <option value="$PROJECT_DIR$/frontend/app/js/controllers/battleController.js" />
       </list>
     </option>
   </component>
@@ -195,6 +207,21 @@
               <item name="uber" type="462c0819:PsiDirectoryNode" />
               <item name="frontend" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="uber" type="b2602c69:ProjectViewProjectNode" />
+              <item name="uber" type="462c0819:PsiDirectoryNode" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="controllers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="uber" type="b2602c69:ProjectViewProjectNode" />
+              <item name="uber" type="462c0819:PsiDirectoryNode" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="libs" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -247,12 +274,12 @@
       <updated>1514259319488</updated>
       <workItem from="1514259320844" duration="995000" />
       <workItem from="1519422127825" duration="11145000" />
-      <workItem from="1519491382154" duration="36777000" />
+      <workItem from="1519491382154" duration="37513000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="48917000" />
+    <option name="totallyTimeSpent" value="49653000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="6" />
@@ -401,14 +428,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/app/js/controllers/insightsController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="35" lean-forward="false" selection-start-line="4" selection-start-column="35" selection-end-line="4" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/frontend/app/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
@@ -425,26 +444,42 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/app/css/style.css">
+    <entry file="file://$PROJECT_DIR$/frontend/app/js/services/battleService.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="56" column="16" lean-forward="true" selection-start-line="56" selection-start-column="16" selection-end-line="56" selection-end-column="16" />
+        <state relative-caret-position="75">
+          <caret line="5" column="36" lean-forward="false" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="36" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/app/js/services/battleService.js">
+    <entry file="file://$PROJECT_DIR$/frontend/app/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="103" column="31" lean-forward="false" selection-start-line="103" selection-start-column="31" selection-end-line="103" selection-end-column="31" />
+        <state relative-caret-position="300">
+          <caret line="47" column="0" lean-forward="true" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/app/view/dashboard.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="54" lean-forward="true" selection-start-line="23" selection-start-column="54" selection-end-line="23" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/app/js/controllers/insightsController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="52" lean-forward="false" selection-start-line="9" selection-start-column="52" selection-end-line="9" selection-end-column="52" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/frontend/app/js/controllers/battleController.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="530">
-          <caret line="698" column="32" lean-forward="false" selection-start-line="698" selection-start-column="19" selection-end-line="698" selection-end-column="32" />
+        <state relative-caret-position="262">
+          <caret line="653" column="74" lean-forward="false" selection-start-line="653" selection-start-column="74" selection-end-line="653" selection-end-column="74" />
           <folding>
             <element signature="e#6600#7291#0" expanded="false" />
             <element signature="e#7647#8181#0" expanded="false" />
@@ -455,14 +490,6 @@
             <element signature="e#13654#14926#0" expanded="false" />
             <element signature="e#16368#17208#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/app/view/dashboard.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="9" column="46" lean-forward="false" selection-start-line="9" selection-start-column="42" selection-end-line="9" selection-end-column="46" />
-          <folding />
         </state>
       </provider>
     </entry>

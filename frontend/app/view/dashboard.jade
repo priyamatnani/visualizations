@@ -8,18 +8,35 @@ div
                 md-tab(label='Data insights')
                     md-content.md-padding
                         //h1.md-display-2 Boob man
-                        div(id="table-wrapper1")
-                            div(id="table-scroll1")
+                        div(class="table-wrapper")
+                            div(class="table-scroll")
                                 table(class="obsTable")
                                     thead
                                         tr
-                                            th Start Station
+                                            th Trip ID
+                                            th Duration
+                                            th Start Date
+                                            th StartS tation
+                                            th Start Terminal
+                                            th End Date
                                             th End Station
-                                            th Rides
-                                    tr(ng-repeat="row in [1,2]")
-                                        td {{row}}
-                                        //td {{row.EndStation}}
-                                            //td {{row.rides}}
+                                            th End Terminal
+                                            th Bike ID
+                                            th Subscriber Type
+                                            th ZipCode
+
+                                    tr(ng-repeat="row in IC.tableData")
+                                        td {{row.TripID}}
+                                        td {{row.Duration}}
+                                        td {{row.StartDate}}
+                                        td {{row.StartStation}}
+                                        td {{row.StartTerminal}}
+                                        td {{row.EndDate}}
+                                        td {{row.EndStation}}
+                                        td {{row.EndTerminal}}
+                                        td {{row.Bike}}
+                                        td {{row.SubscriberType}}
+                                        td {{row.ZipCode}}
 
 
 
@@ -76,8 +93,8 @@ div
                                     nvd3(options="BC.options.SFrides" data="BC.OakchartData")
                                 div(ng-if="BC.charts[5] == true")
                                     h1 Most popular 200 routes
-                                    div(id="table-wrapper")
-                                        div(id="table-scroll")
+                                    div(class="table-wrapper")
+                                        div(class="table-scroll")
                                             table(class="obsTable")
                                                 thead
                                                     tr

@@ -35,22 +35,22 @@ tr:nth-child(odd) td { background: #FEFEFE; }
 tr td:hover { background: #666; color: #FFF; }
 
 
-#table-wrapper {
+.table-wrapper {
     position:relative;
 }
-#table-scroll {
+.table-scroll {
     height:450px;
     overflow:auto;
     margin-top:20px;
 }
-#table-wrapper table {
+.table-wrapper table {
     width:100%;
 
 }
-#table-wrapper table * {
+.table-wrapper table * {
     color:black;
 }
-#table-wrapper table thead th .text {
+.table-wrapper table thead th .text {
     position:absolute;
     top:-20px;
     z-index:2;

@@ -110,6 +110,16 @@ gameOfThrones.factory('battleService',['$q', '$http' ,function($q, $http){
                 }
             });
         },
+        dataInsights : function(){
+            return $http.get('https://raw.githubusercontent.com/kartikn27/raw_files/master/main.json').then(function (response) {
+                if (response !== undefined && response.data !== undefined) {
+                    return response.data;
+                }
+                else {
+                    return $q.reject(response);
+                }
+            });
+        }
 
 
 

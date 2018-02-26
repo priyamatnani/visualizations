@@ -651,7 +651,7 @@ gameOfThrones.controller('battleController',['battleService', function(battleSer
 
         battleService.popularStations().then(function(resp){
             self.popularStationTable = resp;
-            self.popularStationTable = self.popularStationTable.slice(0,99)
+            self.popularStationTable = self.popularStationTable.slice(0,39)
             self.tableParams = new NgTableParams({}, { dataset: self.popularStationTable});
         });
    };
