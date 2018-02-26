@@ -662,11 +662,67 @@ gameOfThrones.controller('battleController',['battleService', function(battleSer
        }
        self.charts[3] = true;
        battleService.zipCodeRides().then(function(resp){
-           
 
+
+
+           self.chartData = angular.copy(resp);
+           var lineAlpha = [], lineBeta = [];
+
+           self.chartData.forEach(function(d) {
+               d['no_of_subscribers'] = +d['no_of_subscribers'];
+               d['no_of_bikes']  = +d['no_of_bikes'];
+
+               lineAlpha.push({x: d['ZipCode'], y: d['no_of_subscribers']});
+               lineBeta.push({x: d['ZipCode'] , y: d['no_of_bikes']});
+           });
+
+           self.zipData = [
+               {
+                   values: lineAlpha,
+                   key: 'Subscriber  count',
+                   color: 'yellow'
+               },
+               {
+                   values: lineBeta,
+                   key: 'Bike Count',
+                   color: 'red'
+               }
+           ];
+
+           self.$apply();
 
        });
-   }
+   };
+
+    self.options.zipData = {
+        chart: {
+            type: 'multiBarChart',
+            height: 450,
+            margin : {
+                top: 20,
+                right: 20,
+                bottom: 40,
+                left: 55
+            },
+            x: function(d){ return d.x; },
+            y: function(d){ return d.y; },
+            xAxis: {
+                // axisLabel: self.chartLabels,
+                //rotateLabels : 45,
+                // staggerLabels: false
+
+            },
+
+
+            yAxis: {
+                axisLabel: '',
+                tickFormat: function(d){
+                    return d3.format('.02f')(d);
+                }
+            },
+            useInteractiveGuideline: false
+        }
+    };
 
 
 

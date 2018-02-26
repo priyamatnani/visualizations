@@ -101,7 +101,7 @@ gameOfThrones.factory('battleService',['$q', '$http' ,function($q, $http){
         },
         zipCodeRides : function(){
 
-            return $http.get('https://raw.githubusercontent.com/kartikn27/raw_files/master/popular_routes.json').then(function (response) {
+            return $http.get('https://raw.githubusercontent.com/kartikn27/raw_files/master/sub_bike_count.json').then(function (response) {
                 if (response !== undefined && response.data !== undefined) {
                     return response.data;
                 }

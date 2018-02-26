@@ -7,9 +7,23 @@ div
             div(ng-controller="insightsController as IC")
                 md-tab(label='Data insights')
                     md-content.md-padding
-                        h1.md-display-2 Tab One
-                        p
-                            | udfbkjdbfkjbfdnjb Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla venenatis ante augue. Phasellus volutpat neque ac dui mattis vulputate. Etiam consequat aliquam cursus. In sodales pretium ultrices. Maecenas lectus est, sollicitudin consectetur felis nec, feugiat ultricies mi.
+                        //h1.md-display-2 Boob man
+                        div(id="table-wrapper1")
+                            div(id="table-scroll1")
+                                table(class="obsTable")
+                                    thead
+                                        tr
+                                            th Start Station
+                                            th End Station
+                                            th Rides
+                                    tr(ng-repeat="row in [1,2]")
+                                        td {{row}}
+                                        //td {{row.EndStation}}
+                                            //td {{row.rides}}
+
+
+
+
             div(ng-controller="battleController as BC")
                 md-tab(label='Observations', ng-click="BC.zipcodeRidesHours()")
                     md-content.md-padding
@@ -174,4 +188,5 @@ div
 
 
                                 div(ng-if="BC.charts[3] == true")
-                                    h1 ass kartik
+                                    h1 ass kartik tharki
+                                    nvd3(options="BC.options.zipData", data="BC.zipData", class="with-3d-shadow with-transitions")
