@@ -11,7 +11,7 @@ div
                         p
                             | udfbkjdbfkjbfdnjb Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla venenatis ante augue. Phasellus volutpat neque ac dui mattis vulputate. Etiam consequat aliquam cursus. In sodales pretium ultrices. Maecenas lectus est, sollicitudin consectetur felis nec, feugiat ultricies mi.
             div(ng-controller="battleController as BC")
-                md-tab(label='Observations')
+                md-tab(label='Observations', ng-click="BC.zipcodeRidesHours()")
                     md-content.md-padding
                         div.layout-column.flex(layout-gt-sm="row")
                             div(flex-gt-sm="30")
@@ -25,32 +25,43 @@ div
                                         md-list-item(ng-click="BC.zipcodeRidesHours()")
                                             p Rides vs Hours by area code
                                         md-list-item(ng-click="BC.dayRides()")
-                                            p Number of rides per day
+                                            p Rides per days of the week
                                         md-list-item(ng-click="BC.dateRides()")
                                             p Rides across all dates
                                         md-list-item(ng-click="BC.userRidesByArea()")
-                                            p Areawise Rides
+                                            p Top 3 cities
                                         md-list-item(ng-click="BC.popularTable()")
-                                            p Table
+                                            p Popular routes
 
                                         md-divider
 
                             div(flex-gt-sm="70")
                                 i(class="fa fa-refresh", title="Refresh")
-                                div(ng-if= "BC.charts[0] == true")
-                                    h1 Number of hours and rides spent for top 10 Areas(Zipcodes)
-                                    nvd3(options="BC.options.userType", data="BC.chartData")
+                                //div(ng-if= "BC.charts[0] == true")
+                                //    h1 Number of hours and rides spent for top 10 Areas(Zipcodes)
+                                //    nvd3(options="BC.options.userType", data="BC.chartData")
                                 div(ng-if= "BC.charts[1] == true")
+                                    h1 Number of hours and rides spent for top 10 Areas(Zipcodes)
                                     nvd3(options="BC.options.zipcodeRide", data="BC.data", class="with-3d-shadow with-transitions")
                                 div(ng-if= "BC.charts[2] == true")
+                                    h1 Distribution of rides as per days of the week
                                     nvd3(options="BC.options.dayRides", data="BC.chartData")
+                                    p(class="recPdata1") Most of the bike traffic is spread almost equally through the week days. Weekend have far less traffic in comparison.
                                 div(ng-if="BC.charts[3] == true")
+                                    h1 Distribution of rides across all the Dates
                                     nvd3(options="BC.options.dateRides" data="BC.chartData")
+                                    p(class="recPdata1") As it is seen in the scatter chart, the weekdays have in upwards of 1000 rides per day. While, weekends have rides in range of 200-600.
+
                                 div(ng-if="BC.charts[4] == true")
+                                    h1 Distribution of rides taken by Subscribers and customers across three most busy cities
+                                    h2 San Francisco
                                     nvd3(options="BC.options.SFrides" data="BC.SFchartData")
+                                    h2 San Jose
                                     nvd3(options="BC.options.SFrides" data="BC.SJchartData")
+                                    h2 Oakland
                                     nvd3(options="BC.options.SFrides" data="BC.OakchartData")
                                 div(ng-if="BC.charts[5] == true")
+                                    h1 Most popular 200 routes
                                     div(id="table-wrapper")
                                         div(id="table-scroll")
                                             table(class="obsTable")
@@ -63,6 +74,7 @@ div
                                                     td {{row.StartStation}}
                                                     td {{row.EndStation}}
                                                     td {{row.rides}}
+                                    p(class="recPdata1") SF Caltrain, Harry Bridges Plaza, Embarcadero are some of the most popular start and end stations.
 
 
 
