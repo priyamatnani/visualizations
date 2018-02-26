@@ -3,7 +3,7 @@
  **/
 
 
-uberBikes.factory('battleService',['$q', '$http' ,function($q, $http){
+uberBikes.factory('bikeService',['$q', '$http' ,function($q, $http){
 
     return{
 

@@ -2,15 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2d65b549-fdf8-4214-82c3-8471d38786f3" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/frontend/app/js/controllers/battleController.js" afterPath="$PROJECT_DIR$/frontend/app/js/controllers/bikeController.js" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/frontend/app/view/battleDetails.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/frontend/app/view/battleDetails.jade" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/frontend/app/js/services/battleService.js" afterPath="$PROJECT_DIR$/frontend/app/js/services/bikeService.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/app/app.js" afterPath="$PROJECT_DIR$/frontend/app/app.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/app/index.html" afterPath="$PROJECT_DIR$/frontend/app/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/app/index.jade" afterPath="$PROJECT_DIR$/frontend/app/index.jade" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/app/js/controllers/bikeController.js" afterPath="$PROJECT_DIR$/frontend/app/js/controllers/bikeController.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/app/js/controllers/insightsController.js" afterPath="$PROJECT_DIR$/frontend/app/js/controllers/insightsController.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/app/js/controllers/mainController.js" afterPath="$PROJECT_DIR$/frontend/app/js/controllers/mainController.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/app/js/services/battleService.js" afterPath="$PROJECT_DIR$/frontend/app/js/services/battleService.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/app/view/dashboard.html" afterPath="$PROJECT_DIR$/frontend/app/view/dashboard.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/app/view/dashboard.jade" afterPath="$PROJECT_DIR$/frontend/app/view/dashboard.jade" />
     </list>
@@ -26,17 +25,17 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="bikeController.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="bikeController.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/frontend/app/js/controllers/bikeController.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="26" lean-forward="false" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="26" />
+            <state relative-caret-position="405">
+              <caret line="27" column="18" lean-forward="true" selection-start-line="27" selection-start-column="18" selection-end-line="27" selection-end-column="18" />
               <folding>
-                <element signature="e#7681#8215#0" expanded="false" />
-                <element signature="e#8249#9043#0" expanded="false" />
-                <element signature="e#11536#12444#0" expanded="false" />
-                <element signature="e#12486#13650#0" expanded="false" />
-                <element signature="e#13686#14958#0" expanded="false" />
+                <element signature="e#7665#8199#0" expanded="false" />
+                <element signature="e#8233#9025#0" expanded="false" />
+                <element signature="e#11518#12424#0" expanded="false" />
+                <element signature="e#12466#13628#0" expanded="false" />
+                <element signature="e#13664#14934#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -52,11 +51,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="battleService.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/frontend/app/js/services/battleService.js">
+      <file leaf-file-name="bikeService.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/frontend/app/js/services/bikeService.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="75">
-              <caret line="5" column="9" lean-forward="false" selection-start-line="5" selection-start-column="9" selection-end-line="5" selection-end-column="9" />
+              <caret line="5" column="30" lean-forward="false" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -75,8 +74,8 @@
       <file leaf-file-name="index.jade" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/frontend/app/index.jade">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="32" column="39" lean-forward="false" selection-start-line="32" selection-start-column="39" selection-end-line="32" selection-end-column="39" />
+            <state relative-caret-position="510">
+              <caret line="34" column="36" lean-forward="false" selection-start-line="34" selection-start-column="36" selection-end-line="34" selection-end-column="36" />
               <folding />
             </state>
           </provider>
@@ -92,21 +91,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dashboard.jade" pinned="false" current-in-tab="true">
+      <file leaf-file-name="dashboard.jade" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/frontend/app/view/dashboard.jade">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="697">
-              <caret line="253" column="0" lean-forward="true" selection-start-line="253" selection-start-column="0" selection-end-line="253" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="battleDetails.jade" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/frontend/app/view/battleDetails.jade">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="40">
+              <caret line="208" column="0" lean-forward="true" selection-start-line="208" selection-start-column="0" selection-end-line="208" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -157,7 +146,12 @@
       <find>200</find>
       <find>battleController</find>
       <find>md-tab</find>
+      <find>San Fr</find>
+      <find>battleService</find>
     </findStrings>
+    <replaceStrings>
+      <replace>bikeService</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -179,9 +173,11 @@
         <option value="$PROJECT_DIR$/frontend/app/app.js" />
         <option value="$PROJECT_DIR$/frontend/app/js/controllers/mainController.js" />
         <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/frontend/app/index.jade" />
         <option value="$PROJECT_DIR$/frontend/app/js/controllers/battleController.js" />
         <option value="$PROJECT_DIR$/frontend/app/view/dashboard.jade" />
+        <option value="$PROJECT_DIR$/frontend/app/index.jade" />
+        <option value="$PROJECT_DIR$/frontend/app/js/services/bikeService.js" />
+        <option value="$PROJECT_DIR$/frontend/app/js/controllers/bikeController.js" />
       </list>
     </option>
   </component>
@@ -255,6 +251,14 @@
               <item name="uber" type="462c0819:PsiDirectoryNode" />
               <item name="frontend" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="services" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="uber" type="b2602c69:ProjectViewProjectNode" />
+              <item name="uber" type="462c0819:PsiDirectoryNode" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="libs" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -278,6 +282,7 @@
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="settings.editor.selected.configurable" value="watcher.settings" />
     <property name="SearchEverywhereHistoryKey" value="read&#9;FILE&#9;file:///Users/priya/Projects/uber/README.md" />
+    <property name="nodejs_interpreter_path" value="/usr/local/bin/node" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -311,12 +316,12 @@
       <updated>1514259319488</updated>
       <workItem from="1514259320844" duration="995000" />
       <workItem from="1519422127825" duration="11145000" />
-      <workItem from="1519491382154" duration="45345000" />
+      <workItem from="1519491382154" duration="45917000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="57485000" />
+    <option name="totallyTimeSpent" value="58057000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="6" />
@@ -325,7 +330,7 @@
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24947146" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32769045" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -374,11 +379,11 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#7681#8215#0" expanded="false" />
-            <element signature="e#8249#9043#0" expanded="false" />
-            <element signature="e#11536#12444#0" expanded="false" />
-            <element signature="e#12486#13650#0" expanded="false" />
-            <element signature="e#13686#14958#0" expanded="false" />
+            <element signature="e#7665#8199#0" expanded="false" />
+            <element signature="e#8233#9025#0" expanded="false" />
+            <element signature="e#11518#12424#0" expanded="false" />
+            <element signature="e#12466#13628#0" expanded="false" />
+            <element signature="e#13664#14934#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -464,14 +469,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/app/js/services/battleService.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="9" lean-forward="false" selection-start-line="5" selection-start-column="9" selection-end-line="5" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/frontend/app/js/controllers/insightsController.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
@@ -504,28 +501,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/app/index.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="32" column="39" lean-forward="false" selection-start-line="32" selection-start-column="39" selection-end-line="32" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/app/js/controllers/bikeController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="26" lean-forward="false" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="26" />
-          <folding>
-            <element signature="e#7681#8215#0" expanded="false" />
-            <element signature="e#8249#9043#0" expanded="false" />
-            <element signature="e#11536#12444#0" expanded="false" />
-            <element signature="e#12486#13650#0" expanded="false" />
-            <element signature="e#13686#14958#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/frontend/app/view/battleDetails.jade">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -544,9 +519,39 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/frontend/app/view/dashboard.jade">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="697">
-          <caret line="253" column="0" lean-forward="true" selection-start-line="253" selection-start-column="0" selection-end-line="253" selection-end-column="0" />
+        <state relative-caret-position="40">
+          <caret line="208" column="0" lean-forward="true" selection-start-line="208" selection-start-column="0" selection-end-line="208" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/app/index.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="34" column="36" lean-forward="false" selection-start-line="34" selection-start-column="36" selection-end-line="34" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/app/js/services/bikeService.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="30" lean-forward="false" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/app/js/controllers/bikeController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="27" column="18" lean-forward="true" selection-start-line="27" selection-start-column="18" selection-end-line="27" selection-end-column="18" />
+          <folding>
+            <element signature="e#7665#8199#0" expanded="false" />
+            <element signature="e#8233#9025#0" expanded="false" />
+            <element signature="e#11518#12424#0" expanded="false" />
+            <element signature="e#12466#13628#0" expanded="false" />
+            <element signature="e#13664#14934#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

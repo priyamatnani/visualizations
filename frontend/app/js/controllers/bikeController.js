@@ -2,7 +2,7 @@
  Created by $(USER) on $(DATE)
  **/
 
-uberBikes.controller('bikeController',['battleService', function(battleService){
+uberBikes.controller('bikeController',['bikeService', function(bikeService){
 
 
 
@@ -20,7 +20,7 @@ uberBikes.controller('bikeController',['battleService', function(battleService){
         }
         self.charts[0] = true;
 
-        battleService.bikeRides().then(function(resp){
+        bikeService.bikeRides().then(function(resp){
 
             self.chartData = angular.copy(resp);
                 var lineAlpha = [], lineBeta = [];
@@ -93,7 +93,7 @@ uberBikes.controller('bikeController',['battleService', function(battleService){
 
 
 
-        battleService.userType(url).then(function(resp){
+        bikeService.userType(url).then(function(resp){
             self.userAvgHours = [];
             self.userAvgHours.push({
                 key : "Count",
@@ -110,7 +110,7 @@ uberBikes.controller('bikeController',['battleService', function(battleService){
 
 
 
-        battleService.userType(url).then(function(resp){
+        bikeService.userType(url).then(function(resp){
             self.userRideHours = [];
             self.userRideHours.push({
                 key : "Count",
@@ -130,7 +130,7 @@ uberBikes.controller('bikeController',['battleService', function(battleService){
         self.charts[1] = true;
 
 
-        battleService.userType(url).then(function(resp){
+        bikeService.userType(url).then(function(resp){
 
             self.userRideCount = resp;
             // userRideCount
@@ -223,7 +223,7 @@ uberBikes.controller('bikeController',['battleService', function(battleService){
         }
         self.charts[1] = true;
 
-        battleService.zipcodeRidesHours().then(function(resp){
+        bikeService.zipcodeRidesHours().then(function(resp){
 
             self.zipcodeData = angular.copy(resp);
             var lineAlpha = [], lineBeta = [];
@@ -299,7 +299,7 @@ uberBikes.controller('bikeController',['battleService', function(battleService){
         }
         self.charts[2] = true;
 
-        battleService.dayRides().then(function(resp){
+        bikeService.dayRides().then(function(resp){
             self.chartData = [];
             self.chartData = angular.copy(resp);
 
@@ -335,7 +335,7 @@ uberBikes.controller('bikeController',['battleService', function(battleService){
         }
         self.charts[3] = true;
 
-        battleService.dateRides().then(function(resp){
+        bikeService.dateRides().then(function(resp){
 
             var json = angular.copy(resp);
 
@@ -453,7 +453,7 @@ uberBikes.controller('bikeController',['battleService', function(battleService){
         }
         self.charts[2] = true;
 
-        battleService.hourRides().then(function(resp){
+        bikeService.hourRides().then(function(resp){
             json = resp;
             //Data is represented as an array of {x,y} pairs.
             for (var i = 0; i < json.length; i++) {
@@ -483,7 +483,7 @@ uberBikes.controller('bikeController',['battleService', function(battleService){
         self.OakchartData = [];
 
         var SJsubs = "https://raw.githubusercontent.com/kartikn27/raw_files/master/OK_rides_combined.json";
-        battleService.subscriberRides(SJsubs).then(function(resp){
+        bikeService.subscriberRides(SJsubs).then(function(resp){
             json = resp;
             json1 = [];
             json2 = [];
@@ -521,7 +521,7 @@ uberBikes.controller('bikeController',['battleService', function(battleService){
         self.SJchartData = [];
 
         var SJsubs = "https://raw.githubusercontent.com/kartikn27/raw_files/master/SJ_rides_combined.json";
-        battleService.subscriberRides(SJsubs).then(function(resp){
+        bikeService.subscriberRides(SJsubs).then(function(resp){
                 json = resp;
                 json1 = [];
                 json2 = [];
@@ -566,8 +566,8 @@ uberBikes.controller('bikeController',['battleService', function(battleService){
 
         var SFsubs = "https://raw.githubusercontent.com/kartikn27/raw_files/master/SF_subs.json";
         var SFcust = "https://raw.githubusercontent.com/kartikn27/raw_files/master/SF_cus.json";
-        battleService.subscriberRides(SFsubs).then(function(resp){
-            battleService.customerRides(SFcust).then(function(resp2){
+        bikeService.subscriberRides(SFsubs).then(function(resp){
+            bikeService.customerRides(SFcust).then(function(resp2){
                 json1 = resp;
                 json2 = resp2;
 
@@ -651,7 +651,7 @@ uberBikes.controller('bikeController',['battleService', function(battleService){
        }
        self.charts[5] = true;
 
-        battleService.popularStations().then(function(resp){
+        bikeService.popularStations().then(function(resp){
             self.popularStationTable = resp;
             self.popularStationTable = self.popularStationTable.slice(0,39)
             self.tableParams = new NgTableParams({}, { dataset: self.popularStationTable});
@@ -663,7 +663,7 @@ uberBikes.controller('bikeController',['battleService', function(battleService){
            self.charts[i] = false;
        }
        self.charts[3] = true;
-       battleService.zipCodeRides().then(function(resp){
+       bikeService.zipCodeRides().then(function(resp){
 
 
 
