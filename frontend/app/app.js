@@ -1,8 +1,8 @@
 
-var gameOfThrones = angular.module('gameOfThrones',['ui.router', 'ngMaterial', 'ngAnimate','ngAria','nvd3','ngTable']);
+var uberBikes = angular.module('uberBikes',['ui.router', 'ngMaterial', 'ngAnimate','ngAria','nvd3','ngTable']);
 
 
-gameOfThrones.config(['$stateProvider','$urlRouterProvider', '$qProvider', function($stateProvider,$urlRouterProvider, $qProvider){
+uberBikes.config(['$stateProvider','$urlRouterProvider', '$qProvider', function($stateProvider,$urlRouterProvider, $qProvider){
 
     $urlRouterProvider.otherwise('/dashboard');
 
@@ -11,7 +11,7 @@ gameOfThrones.config(['$stateProvider','$urlRouterProvider', '$qProvider', funct
             url: '/dashboard',
             templateUrl: 'view/dashboard.html'
 
-        })
+        });
 
     $qProvider.errorOnUnhandledRejections(false);
 

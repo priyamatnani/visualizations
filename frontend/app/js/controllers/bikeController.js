@@ -2,7 +2,7 @@
  Created by $(USER) on $(DATE)
  **/
 
-gameOfThrones.controller('battleController',['battleService', function(battleService){
+uberBikes.controller('bikeController',['battleService', function(battleService){
 
 
 

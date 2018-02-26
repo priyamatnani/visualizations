@@ -1,7 +1,7 @@
 /**
  Created by $(USER) on $(DATE)
  **/
-gameOfThrones.controller('insightsController',['battleService', function(battleService){
+uberBikes.controller('insightsController',['battleService', function(battleService){
     console.log("insightsController>>>>")
 
     var self = this;
